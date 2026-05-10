@@ -932,37 +932,42 @@
         <!-- KEY METRICS ROW -->
         <div class="project-metrics">
             <div class="metric">
-                <span class="metric-val">590K+</span>
-                <span class="metric-label">Transactions</span>
+                <span class="metric-val">0.926</span>
+                <span class="metric-label">Fraud AUC-ROC</span>
             </div>
             <div class="metric">
-                <span class="metric-val">2</span>
-                <span class="metric-label">Tasks</span>
+                <span class="metric-val">0.785</span>
+                <span class="metric-label">Credit AUC-ROC</span>
             </div>
             <div class="metric">
-                <span class="metric-val">SHAP</span>
-                <span class="metric-label">Explainable</span>
+                <span class="metric-val">70.5%</span>
+                <span class="metric-label">Fraud Recall</span>
             </div>
             <div class="metric">
-                <span class="metric-val">Docker</span>
-                <span class="metric-label">Production</span>
+                <span class="metric-val">71.0%</span>
+                <span class="metric-label">Default Recall</span>
             </div>
         </div>
 
         <p class="card-desc">
-            Production-ready ML framework combining <strong style="color:#e2e8f0">fraud detection</strong>
-            and <strong style="color:#e2e8f0">credit risk scoring</strong> on 590K+ real IEEE-CIS transactions.
-            Features time-aware cross-validation (no data leakage), extreme imbalance handling,
-            SHAP explainability, counterfactual reasoning, and FastAPI deployment.
+            Two production-grade financial risk systems built end-to-end on real datasets.
+            <strong style="color:#e2e8f0">Fraud Detection</strong> on 590K+ IEEE-CIS transactions
+            (AUC-ROC 0.9258, 70.5% recall) with temporal split, D-column normalization, and UID fingerprinting.
+            <strong style="color:#e2e8f0">Credit Scoring</strong> on 307K+ applicants across 7 tables / 57M+ rows
+            (AUC-ROC 0.7849, 71.0% recall) with missing-as-signal encoding and stacking ensemble.
+            Both deployed on FastAPI + Docker + AWS EC2.
         </p>
 
         <div class="card-stack">
             <span class="stack-pill">XGBoost</span>
             <span class="stack-pill">LightGBM</span>
+            <span class="stack-pill">CatBoost</span>
+            <span class="stack-pill">Optuna</span>
             <span class="stack-pill">SHAP</span>
             <span class="stack-pill">FastAPI</span>
             <span class="stack-pill">Docker</span>
-            <span class="stack-pill">IEEE-CIS Dataset</span>
+            <span class="stack-pill">AWS EC2</span>
+            <span class="stack-pill">Gradio</span>
         </div>
 
         <div class="card-actions">
