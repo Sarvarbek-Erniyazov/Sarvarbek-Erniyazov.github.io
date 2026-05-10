@@ -332,6 +332,108 @@
             .projects-grid,.explore-grid,.grants-grid{grid-template-columns:1fr}
             .stats-row{gap:24px} .stat-num{font-size:2.2rem}
         }
+
+        /* ── FEATURED PROJECT ── */
+        .featured-project {
+            border-color: rgba(29,111,232,0.35) !important;
+            box-shadow: 0 0 0 1px rgba(29,111,232,0.15), 0 8px 40px rgba(0,0,0,0.3);
+        }
+
+        .live-demo-banner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06));
+            border-bottom: 1px solid rgba(16,185,129,0.2);
+            padding: 10px 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--emerald-glow);
+        }
+
+        .live-dot {
+            width: 8px; height: 8px;
+            background: var(--emerald);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+
+        .try-now-btn {
+            margin-left: auto;
+            background: rgba(16,185,129,0.15);
+            border: 1px solid rgba(16,185,129,0.35);
+            color: var(--emerald-glow);
+            padding: 5px 14px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .try-now-btn:hover {
+            background: rgba(16,185,129,0.3);
+            transform: translateX(2px);
+        }
+
+        .project-metrics {
+            display: flex;
+            gap: 0;
+            margin-bottom: 18px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .metric {
+            flex: 1;
+            text-align: center;
+            padding: 12px 8px;
+            border-right: 1px solid rgba(255,255,255,0.06);
+        }
+        .metric:last-child { border-right: none; }
+        .metric-val {
+            display: block;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .metric-label {
+            display: block;
+            font-size: 0.65rem;
+            color: var(--slate);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .btn-demo {
+            flex: 1;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(16,185,129,0.25), rgba(16,185,129,0.15));
+            color: var(--emerald-glow);
+            border: 1px solid rgba(16,185,129,0.4);
+            padding: 11px 16px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-demo:hover {
+            background: rgba(16,185,129,0.35);
+            border-color: var(--emerald);
+            color: #fff;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -789,24 +891,90 @@
         <button class="filter-btn" data-filter="fintech-ai">FinTech AI</button>
     </div>
     <div class="projects-grid" id="projects-grid">
-        <article class="project-card" data-category="fintech-ai trustworthy-ai">
-            <div class="card-visual v1">
-                <i class="fas fa-shield-halved card-icon-bg" style="color:#3b82f6;"></i>
-                <div class="card-tags-top"><span class="tag tag-blue">FinTech AI</span><span class="tag tag-cyan">Trustworthy AI</span></div>
-                <div class="card-diagram">
-                    <div class="diag-row"><div class="diag-box">Raw Transactions</div><span class="diag-arrow">→</span><div class="diag-box highlight">Feature Engine</div></div>
-                    <div class="diag-row"><div class="diag-box highlight">Fraud Model</div><span class="diag-arrow">+</span><div class="diag-box highlight">Credit Model</div></div>
-                    <div class="diag-row"><div class="diag-box accent-box">SHAP · Counterfactual</div></div>
-                </div>
+        <article class="project-card featured-project" data-category="fintech-ai trustworthy-ai">
+    <!-- TOP LIVE DEMO BANNER -->
+    <div class="live-demo-banner">
+        <span class="live-dot"></span>
+        <span>Live Demo Available</span>
+        <a href="https://huggingface.co/spaces/Sarvarbek13/FinRiskGuard" target="_blank" class="try-now-btn">
+            Try it now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="card-visual v1">
+        <i class="fas fa-shield-halved card-icon-bg" style="color:#3b82f6;"></i>
+        <div class="card-tags-top">
+            <span class="tag tag-blue">FinTech AI</span>
+            <span class="tag tag-cyan">Trustworthy AI</span>
+            <span class="tag tag-emerald">Deployed</span>
+        </div>
+        <div class="card-diagram">
+            <div class="diag-row">
+                <div class="diag-box">590K+ Transactions</div>
+                <span class="diag-arrow">→</span>
+                <div class="diag-box highlight">Feature Engine</div>
             </div>
-            <div class="card-body">
-                <div class="card-subtitle">Dual-Task Financial Risk System</div>
-                <h3 class="card-title">FinRiskGuard</h3>
-                <p class="card-desc">End-to-end ML framework combining fraud detection and credit risk scoring on 590K+ real transactions. Time-aware CV, imbalance handling, SHAP explainability.</p>
-                <div class="card-stack"><span class="stack-pill">XGBoost</span><span class="stack-pill">SHAP</span><span class="stack-pill">FastAPI</span><span class="stack-pill">Docker</span></div>
-                <div class="card-actions"><a href="https://github.com/Sarvarbek-Erniyazov/FinRiskGuard" target="_blank" class="btn-card-primary"><i class="fab fa-github" style="margin-right:6px;"></i>View Code</a></div>
+            <div class="diag-row">
+                <div class="diag-box highlight">Fraud XGBoost</div>
+                <span class="diag-arrow">+</span>
+                <div class="diag-box highlight">Credit Model</div>
             </div>
-        </article>
+            <div class="diag-row">
+                <div class="diag-box accent-box">SHAP · Counterfactual · API</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="card-subtitle">End-to-End · Dual-Task Financial Risk System</div>
+        <h3 class="card-title">FinRiskGuard</h3>
+
+        <!-- KEY METRICS ROW -->
+        <div class="project-metrics">
+            <div class="metric">
+                <span class="metric-val">590K+</span>
+                <span class="metric-label">Transactions</span>
+            </div>
+            <div class="metric">
+                <span class="metric-val">2</span>
+                <span class="metric-label">Tasks</span>
+            </div>
+            <div class="metric">
+                <span class="metric-val">SHAP</span>
+                <span class="metric-label">Explainable</span>
+            </div>
+            <div class="metric">
+                <span class="metric-val">Docker</span>
+                <span class="metric-label">Production</span>
+            </div>
+        </div>
+
+        <p class="card-desc">
+            Production-ready ML framework combining <strong style="color:#e2e8f0">fraud detection</strong>
+            and <strong style="color:#e2e8f0">credit risk scoring</strong> on 590K+ real IEEE-CIS transactions.
+            Features time-aware cross-validation (no data leakage), extreme imbalance handling,
+            SHAP explainability, counterfactual reasoning, and FastAPI deployment.
+        </p>
+
+        <div class="card-stack">
+            <span class="stack-pill">XGBoost</span>
+            <span class="stack-pill">LightGBM</span>
+            <span class="stack-pill">SHAP</span>
+            <span class="stack-pill">FastAPI</span>
+            <span class="stack-pill">Docker</span>
+            <span class="stack-pill">IEEE-CIS Dataset</span>
+        </div>
+
+        <div class="card-actions">
+            <a href="https://huggingface.co/spaces/Sarvarbek13/FinRiskGuard" target="_blank" class="btn-demo">
+                <i class="fas fa-play-circle"></i> Live Demo
+            </a>
+            <a href="https://github.com/Sarvarbek-Erniyazov/FinRiskGuard" target="_blank" class="btn-card-primary">
+                <i class="fab fa-github" style="margin-right:6px;"></i> GitHub
+            </a>
+        </div>
+    </div>
+</article>
         <article class="project-card" data-category="trustworthy-ai mlops">
             <div class="card-visual v2">
                 <i class="fas fa-satellite-dish card-icon-bg" style="color:#a78bfa;"></i>
