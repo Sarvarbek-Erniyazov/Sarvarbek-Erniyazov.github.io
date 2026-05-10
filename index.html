@@ -4,23 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sarvarbek Erniyazov | AI Researcher</title>
-    <meta name="description" content="PhD candidate at Chonnam National University. Research on Graph Neural Networks, Federated Learning, Mixture-of-Experts, and LLMs for intelligent infrastructure and scientific systems.">
+    <meta name="description" content="PhD candidate at Chonnam National University. Research on Graph Neural Networks, Federated Learning, Mixture-of-Experts, LLMs, and Physical AI for intelligent systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
         :root {
             --navy: #050d1a;
-            --navy-mid: #0a1628;
-            --navy-light: #0f2040;
             --blue: #1d6fe8;
             --blue-bright: #3b82f6;
             --blue-glow: #60a5fa;
             --accent: #00d4ff;
-            --accent2: #7c3aed;
             --emerald: #10b981;
             --emerald-glow: #6ee7b7;
             --amber-glow: #fcd34d;
+            --rose: #f43f5e;
+            --rose-glow: #fda4af;
             --slate: #94a3b8;
             --slate-light: #cbd5e1;
             --white: #f8fafc;
@@ -48,815 +47,290 @@
             pointer-events: none;
             z-index: 0;
         }
+
+        /* ── NAV ── */
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
             background: rgba(5,13,26,0.85);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(59,130,246,0.12);
             padding: 18px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        .nav-logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
+        .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); text-decoration: none; letter-spacing: -0.02em; }
         .nav-logo span { color: var(--accent); }
-        .nav-links { display: flex; align-items: center; gap: 28px; }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--slate);
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: var(--white); }
-        .nav-links .icon-link { font-size: 1.2rem; color: var(--slate); }
+        .nav-links .icon-link { font-size: 1.1rem; }
         .nav-links .icon-link:hover { color: var(--accent); }
+
+        /* ── HERO ── */
         header {
-            position: relative;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 40px 80px;
-            overflow: hidden;
-            z-index: 1;
+            position: relative; min-height: 90vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 100px 40px 80px;
+            overflow: hidden; z-index: 1;
         }
         .hero-glow {
-            position: absolute;
-            width: 700px; height: 700px;
-            border-radius: 50%;
+            position: absolute; width: 700px; height: 700px; border-radius: 50%;
             background: radial-gradient(circle, rgba(29,111,232,0.18) 0%, transparent 70%);
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
+            top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
         }
         .hero-glow2 {
-            position: absolute;
-            width: 400px; height: 400px;
-            border-radius: 50%;
+            position: absolute; width: 400px; height: 400px; border-radius: 50%;
             background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
-            top: 30%; right: 15%;
-            pointer-events: none;
+            top: 30%; right: 15%; pointer-events: none;
         }
         .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(29,111,232,0.12);
-            border: 1px solid rgba(29,111,232,0.3);
-            color: var(--blue-glow);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            padding: 9px 22px;
-            border-radius: 100px;
-            margin-bottom: 32px;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(29,111,232,0.12); border: 1px solid rgba(29,111,232,0.3);
+            color: var(--blue-glow); font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.18em; text-transform: uppercase;
+            padding: 9px 22px; border-radius: 100px; margin-bottom: 32px;
         }
         .hero-badge::before {
-            content: '';
-            width: 6px; height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+            content: ''; width: 6px; height: 6px; background: var(--accent);
+            border-radius: 50%; animation: pulse 2s infinite;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.5); }
-        }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
         .hero-title {
             font-family: 'DM Serif Display', serif;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin-bottom: 28px;
-            color: var(--white);
+            font-size: clamp(3rem,7vw,5.5rem);
+            line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 28px;
         }
         .hero-title .accent-word { color: var(--accent); font-style: italic; }
-        .hero-tagline {
-            font-size: 1.3rem;
-            color: var(--slate-light);
-            line-height: 1.7;
-            max-width: 720px;
-            margin: 0 auto 20px;
-            font-weight: 400;
-        }
-        .tagline-sub {
-            color: var(--slate);
-            font-size: 1.05rem;
-            font-weight: 300;
-            font-style: italic;
-            display: block;
-            margin-top: 12px;
-        }
+        .hero-tagline { font-size: 1.3rem; color: var(--slate-light); line-height: 1.7; max-width: 720px; margin: 0 auto 20px; }
+        .tagline-sub { color: var(--slate); font-size: 1.05rem; font-weight: 300; font-style: italic; display: block; margin-top: 12px; }
         .hero-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
         .btn-primary {
-            background: var(--blue);
-            color: #fff;
-            padding: 15px 34px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 0 32px rgba(29,111,232,0.35);
+            background: var(--blue); color: #fff; padding: 15px 34px; border-radius: 12px;
+            font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s;
+            border: none; cursor: pointer; box-shadow: 0 0 32px rgba(29,111,232,0.35);
         }
-        .btn-primary:hover {
-            background: var(--blue-bright);
-            transform: translateY(-2px);
-            box-shadow: 0 0 48px rgba(29,111,232,0.5);
-        }
+        .btn-primary:hover { background: var(--blue-bright); transform: translateY(-2px); }
         .btn-ghost {
-            background: rgba(255,255,255,0.05);
-            color: var(--white);
-            padding: 15px 34px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.12);
-            transition: all 0.2s;
+            background: rgba(255,255,255,0.05); color: var(--white); padding: 15px 34px;
+            border-radius: 12px; font-weight: 600; font-size: 0.95rem; text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.12); transition: all 0.2s;
         }
-        .btn-ghost:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
-        }
+        .btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+        /* ── SECTIONS ── */
         section {
-            position: relative;
-            z-index: 1;
-            padding: 100px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            position: relative; z-index: 1;
+            padding: 100px 40px; max-width: 1200px; margin: 0 auto;
         }
         .section-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 18px;
+            font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em;
+            text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
             font-family: 'DM Mono', monospace;
         }
         .section-title {
             font-family: 'DM Serif Display', serif;
-            font-size: clamp(2.2rem, 4.2vw, 3.2rem);
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            color: var(--white);
-            margin-bottom: 18px;
+            font-size: clamp(2.2rem,4.2vw,3.2rem);
+            line-height: 1.15; letter-spacing: -0.02em; color: var(--white); margin-bottom: 18px;
         }
         .section-subtitle {
-            color: var(--slate);
-            font-size: 1.1rem;
-            font-weight: 300;
-            margin-bottom: 52px;
-            max-width: 680px;
-            line-height: 1.7;
+            color: var(--slate); font-size: 1.1rem; font-weight: 300;
+            margin-bottom: 52px; max-width: 680px; line-height: 1.7;
         }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-            margin-top: 20px;
-        }
+
+        /* ── ABOUT ── */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 20px; }
         @media(max-width:768px){ .about-grid { grid-template-columns: 1fr; } }
-        .about-divider {
-            width: 48px; height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--blue));
-            border-radius: 2px;
-            margin-bottom: 32px;
-        }
-        .about-text {
-            color: var(--slate-light);
-            line-height: 1.85;
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
+        .about-divider { width: 48px; height: 3px; background: linear-gradient(90deg,var(--accent),var(--blue)); border-radius: 2px; margin-bottom: 32px; }
+        .about-text { color: var(--slate-light); line-height: 1.85; font-size: 1.1rem; font-weight: 300; }
         .about-text strong { color: var(--white); font-weight: 500; }
-        .stats-row {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        .stat { text-align: left; }
-        .stat-num {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.7rem;
-            color: var(--accent);
-            line-height: 1;
-        }
-        .stat-label {
-            font-size: 0.82rem;
-            color: var(--slate);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-top: 8px;
-        }
-        .interests-block {
-            margin-top: 48px;
-            padding: 28px 32px;
-            background: rgba(13,31,60,0.5);
-            border-left: 3px solid var(--accent);
-            border-radius: 8px;
-        }
-        .interests-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-family: 'DM Mono', monospace;
-        }
-        .interests-text {
-            color: var(--slate-light);
-            font-size: 1.02rem;
-            line-height: 1.75;
-            font-weight: 300;
-        }
+        .stats-row { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+        .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.7rem; color: var(--accent); line-height: 1; }
+        .stat-label { font-size: 0.82rem; color: var(--slate); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; }
+        .interests-block { margin-top: 48px; padding: 28px 32px; background: rgba(13,31,60,0.5); border-left: 3px solid var(--accent); border-radius: 8px; }
+        .interests-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-family: 'DM Mono', monospace; }
+        .interests-text { color: var(--slate-light); font-size: 1.02rem; line-height: 1.75; font-weight: 300; }
         .interests-text strong { color: var(--white); font-weight: 500; }
-        .pub-list {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-        }
+
+        /* ── PUBLICATIONS ── */
+        .pub-list { display: flex; flex-direction: column; gap: 22px; }
         .pub-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 18px;
-            padding: 30px 34px;
-            transition: all 0.3s;
-            position: relative;
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: 18px; padding: 30px 34px; transition: all 0.3s;
         }
-        .pub-card.featured {
-            border-left: 3px solid var(--accent);
-        }
-        .pub-card.legacy-featured {
-            border-left: 3px solid var(--emerald);
-        }
-        .pub-card:hover {
-            border-color: rgba(59,130,246,0.4);
-            background: var(--card-bg-hover);
-            transform: translateY(-2px);
-        }
-        .pub-meta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 16px;
-        }
+        .pub-card.featured { border-left: 3px solid var(--accent); }
+        .pub-card.legacy-featured { border-left: 3px solid var(--emerald); }
+        .pub-card:hover { border-color: rgba(59,130,246,0.4); background: var(--card-bg-hover); transform: translateY(-2px); }
+        .pub-meta-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
         .pub-year {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
-            background: rgba(0,212,255,0.08);
-            border: 1px solid rgba(0,212,255,0.2);
-            padding: 4px 11px;
-            border-radius: 6px;
+            font-family: 'DM Mono', monospace; font-size: 0.85rem; font-weight: 600;
+            color: var(--accent); background: rgba(0,212,255,0.08);
+            border: 1px solid rgba(0,212,255,0.2); padding: 4px 11px; border-radius: 6px;
         }
-        .pub-venue {
-            font-size: 0.92rem;
-            color: var(--slate-light);
-            font-style: italic;
-            font-weight: 400;
-        }
-        .pub-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding: 4px 11px;
-            border-radius: 100px;
-        }
-        .pub-citations {
-            font-size: 0.82rem;
-            color: var(--slate);
-            margin-left: auto;
-            font-family: 'DM Mono', monospace;
-        }
-        .pub-citations.highlight {
-            color: var(--emerald-glow);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .pub-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.45rem;
-            color: var(--white);
-            line-height: 1.3;
-            letter-spacing: -0.01em;
-            margin-bottom: 10px;
-        }
-        .pub-title-sm {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: var(--white);
-            line-height: 1.4;
-            margin-bottom: 6px;
-        }
-        .pub-authors {
-            font-size: 0.95rem;
-            color: var(--slate-light);
-            margin-bottom: 14px;
-            font-weight: 300;
-        }
+        .pub-venue { font-size: 0.92rem; color: var(--slate-light); font-style: italic; }
+        .pub-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 11px; border-radius: 100px; }
+        .pub-citations { font-size: 0.82rem; color: var(--slate); margin-left: auto; font-family: 'DM Mono', monospace; }
+        .pub-citations.highlight { color: var(--emerald-glow); font-weight: 600; font-size: 0.95rem; }
+        .pub-title { font-family: 'DM Serif Display', serif; font-size: 1.45rem; color: var(--white); line-height: 1.3; margin-bottom: 10px; }
+        .pub-title-sm { font-weight: 600; font-size: 1.05rem; color: var(--white); line-height: 1.4; margin-bottom: 6px; }
+        .pub-authors { font-size: 0.95rem; color: var(--slate-light); margin-bottom: 14px; font-weight: 300; }
         .pub-authors strong { color: var(--white); font-weight: 600; }
-        .pub-abstract {
-            font-size: 1rem;
-            color: var(--slate);
-            line-height: 1.75;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-        .pub-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+        .pub-abstract { font-size: 1rem; color: var(--slate); line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
+        .pub-actions { display: flex; gap: 12px; flex-wrap: wrap; }
         .pub-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 15px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: var(--slate-light);
-            text-decoration: none;
-            transition: all 0.2s;
-            font-weight: 500;
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 15px; background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08); border-radius: 8px;
+            font-size: 0.85rem; color: var(--slate-light); text-decoration: none; transition: all 0.2s;
         }
-        .pub-link:hover {
-            background: rgba(29,111,232,0.15);
-            border-color: rgba(59,130,246,0.4);
-            color: var(--blue-glow);
-        }
-        .pub-link i { font-size: 0.9rem; }
-        .pub-card.compact {
-            padding: 20px 26px;
-            background: rgba(13,31,60,0.5);
-        }
-        .pub-card.compact .pub-meta-row { margin-bottom: 8px; }
+        .pub-link:hover { background: rgba(29,111,232,0.15); border-color: rgba(59,130,246,0.4); color: var(--blue-glow); }
+        .pub-card.compact { padding: 20px 26px; background: rgba(13,31,60,0.5); }
         .tag-blue { background: rgba(29,111,232,0.2); color: var(--blue-glow); border: 1px solid rgba(59,130,246,0.3); }
         .tag-purple { background: rgba(124,58,237,0.18); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
         .tag-cyan { background: rgba(0,212,255,0.12); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); }
         .tag-emerald { background: rgba(16,185,129,0.12); color: var(--emerald-glow); border: 1px solid rgba(16,185,129,0.3); }
         .tag-amber { background: rgba(245,158,11,0.12); color: var(--amber-glow); border: 1px solid rgba(245,158,11,0.3); }
         .tag-pink { background: rgba(236,72,153,0.12); color: #f9a8d4; border: 1px solid rgba(236,72,153,0.3); }
-        .pub-section-divider {
-            margin-top: 36px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .pub-section-divider .divider-line {
-            flex: 1;
-            height: 1px;
-            background: rgba(255,255,255,0.08);
-        }
-        .pub-section-divider .divider-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--slate);
-            font-family: 'DM Mono', monospace;
-        }
+        .tag-rose { background: rgba(244,63,94,0.12); color: var(--rose-glow); border: 1px solid rgba(244,63,94,0.3); }
+        .pub-section-divider { margin: 36px 0 20px; display: flex; align-items: center; gap: 16px; }
+        .pub-section-divider .divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+        .pub-section-divider .divider-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); font-family: 'DM Mono', monospace; }
         .earlier-work { margin-top: 20px; }
         .toggle-earlier {
-            width: 100%;
-            background: rgba(255,255,255,0.03);
-            border: 1px dashed rgba(255,255,255,0.1);
-            border-radius: 14px;
-            padding: 20px 26px;
-            color: var(--slate-light);
-            font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.25s;
+            width: 100%; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1);
+            border-radius: 14px; padding: 20px 26px; color: var(--slate-light);
+            font-family: 'Outfit',sans-serif; font-size: 1rem; font-weight: 500;
+            cursor: pointer; text-align: left; display: flex; align-items: center; gap: 12px; transition: all 0.25s;
         }
-        .toggle-earlier:hover {
-            background: rgba(29,111,232,0.06);
-            border-color: rgba(59,130,246,0.3);
-            color: var(--white);
-        }
-        .toggle-icon {
-            transition: transform 0.3s;
-            font-size: 0.85rem;
-            color: var(--accent);
-        }
+        .toggle-earlier:hover { background: rgba(29,111,232,0.06); border-color: rgba(59,130,246,0.3); color: var(--white); }
+        .toggle-icon { transition: transform 0.3s; font-size: 0.85rem; color: var(--accent); }
         .toggle-earlier.open .toggle-icon { transform: rotate(90deg); }
-        .earlier-list {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 0;
-        }
-        .earlier-list.open {
-            max-height: 3000px;
-            margin-top: 16px;
-        }
-        .earlier-note {
-            color: var(--slate);
-            font-size: 0.92rem;
-            text-align: center;
-            padding: 16px;
-            margin-top: 8px;
-            font-style: italic;
-        }
-        .earlier-note a {
-            color: var(--blue-glow);
-            text-decoration: none;
-            border-bottom: 1px dashed rgba(96,165,250,0.4);
-        }
-        .earlier-note a:hover { color: var(--accent); }
-        .grants-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 22px;
-        }
+        .earlier-list { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; display: flex; flex-direction: column; gap: 12px; }
+        .earlier-list.open { max-height: 3000px; margin-top: 16px; }
+        .earlier-note { color: var(--slate); font-size: 0.92rem; text-align: center; padding: 16px; font-style: italic; }
+        .earlier-note a { color: var(--blue-glow); text-decoration: none; border-bottom: 1px dashed rgba(96,165,250,0.4); }
+
+        /* ── GRANTS ── */
+        .grants-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px,1fr)); gap: 22px; }
         .grant-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 18px;
-            padding: 28px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: 18px; padding: 28px; transition: all 0.3s; position: relative; overflow: hidden;
         }
-        .grant-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-        }
-        .grant-card.active::before { background: linear-gradient(90deg, var(--emerald-glow), var(--emerald)); }
-        .grant-card.review::before { background: linear-gradient(90deg, var(--amber-glow), #f59e0b); }
-        .grant-card.completed::before { background: linear-gradient(90deg, var(--slate-light), var(--slate)); }
-        .grant-card:hover {
-            border-color: rgba(59,130,246,0.4);
-            transform: translateY(-3px);
-            box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-        }
+        .grant-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+        .grant-card.active::before { background: linear-gradient(90deg,var(--emerald-glow),var(--emerald)); }
+        .grant-card.review::before { background: linear-gradient(90deg,var(--amber-glow),#f59e0b); }
+        .grant-card.completed::before { background: linear-gradient(90deg,var(--slate-light),var(--slate)); }
+        .grant-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-3px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
         .grant-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 5px 12px;
-            border-radius: 100px;
-            margin-bottom: 14px;
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 5px 12px; border-radius: 100px; margin-bottom: 14px;
         }
-        .grant-card.active .grant-status {
-            background: rgba(16,185,129,0.12);
-            color: var(--emerald-glow);
-            border: 1px solid rgba(16,185,129,0.3);
+        .grant-card.active .grant-status { background: rgba(16,185,129,0.12); color: var(--emerald-glow); border: 1px solid rgba(16,185,129,0.3); }
+        .grant-card.review .grant-status { background: rgba(245,158,11,0.12); color: var(--amber-glow); border: 1px solid rgba(245,158,11,0.3); }
+        .grant-card.completed .grant-status { background: rgba(148,163,184,0.12); color: var(--slate-light); border: 1px solid rgba(148,163,184,0.3); }
+        .grant-id { font-family: 'DM Mono',monospace; font-size: 0.78rem; color: var(--slate); margin-bottom: 12px; }
+        .grant-title { font-family: 'DM Serif Display',serif; font-size: 1.3rem; color: var(--white); line-height: 1.3; margin-bottom: 10px; }
+        .grant-funder { font-size: 0.92rem; color: var(--blue-glow); font-weight: 500; margin-bottom: 14px; }
+        .grant-desc { font-size: 0.94rem; color: var(--slate); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
+        .grant-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        /* ── EXPLORATORY PROJECTS ── */
+        .explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); gap: 24px; }
+        .explore-card {
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: 20px; padding: 32px; transition: all 0.3s; position: relative; overflow: hidden;
         }
-        .grant-card.review .grant-status {
-            background: rgba(245,158,11,0.12);
-            color: var(--amber-glow);
-            border: 1px solid rgba(245,158,11,0.3);
+        .explore-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+        .explore-card.hot::before { background: linear-gradient(90deg, var(--rose), #f97316); }
+        .explore-card.warm::before { background: linear-gradient(90deg, var(--accent), var(--blue)); }
+        .explore-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+        .explore-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+        .explore-badges { display: flex; flex-direction: column; gap: 8px; }
+        .hot-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(244,63,94,0.12); border: 1px solid rgba(244,63,94,0.3);
+            color: var(--rose-glow); font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
         }
-        .grant-card.completed .grant-status {
-            background: rgba(148,163,184,0.12);
-            color: var(--slate-light);
-            border: 1px solid rgba(148,163,184,0.3);
+        .coming-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
+            color: var(--amber-glow); font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
         }
-        .grant-id {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--slate);
-            margin-bottom: 12px;
+        .innocore-cluster {
+            font-family: 'DM Mono',monospace; font-size: 0.72rem; color: var(--accent);
+            background: rgba(0,212,255,0.06); border: 1px solid rgba(0,212,255,0.15);
+            padding: 4px 10px; border-radius: 6px; white-space: nowrap;
         }
-        .grant-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.3rem;
-            color: var(--white);
-            line-height: 1.3;
-            letter-spacing: -0.01em;
-            margin-bottom: 10px;
+        .explore-title { font-family: 'DM Serif Display',serif; font-size: 1.6rem; color: var(--white); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .explore-subtitle { font-family: 'DM Mono',monospace; font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+        .explore-desc { font-size: 0.95rem; color: var(--slate); line-height: 1.75; font-weight: 300; margin-bottom: 22px; }
+        .explore-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+        .explore-links { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .explore-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 14px; background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08); border-radius: 8px;
+            font-size: 0.82rem; color: var(--slate-light); text-decoration: none; transition: all 0.2s;
         }
-        .grant-funder {
-            font-size: 0.92rem;
-            color: var(--blue-glow);
-            font-weight: 500;
-            margin-bottom: 14px;
-        }
-        .grant-desc {
-            font-size: 0.94rem;
-            color: var(--slate);
-            line-height: 1.7;
-            font-weight: 300;
-            margin-bottom: 18px;
-        }
-        .grant-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .filter-bar {
-            display: flex;
-            gap: 8px;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            padding: 6px;
-            border-radius: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
-            width: fit-content;
-        }
-        .filter-btn {
-            padding: 9px 22px;
-            border-radius: 10px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: transparent;
-            color: var(--slate);
-            font-family: 'Outfit', sans-serif;
-        }
+        .explore-link:hover { background: rgba(29,111,232,0.15); border-color: rgba(59,130,246,0.4); color: var(--blue-glow); }
+
+        /* ── ENGINEERING ── */
+        .filter-bar { display: flex; gap: 8px; background: var(--card-bg); border: 1px solid var(--card-border); padding: 6px; border-radius: 14px; flex-wrap: wrap; margin-bottom: 32px; width: fit-content; }
+        .filter-btn { padding: 9px 22px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--slate); font-family: 'Outfit',sans-serif; }
         .filter-btn:hover { color: var(--white); background: rgba(255,255,255,0.06); }
-        .filter-btn.active {
-            background: var(--blue);
-            color: #fff;
-            box-shadow: 0 0 20px rgba(29,111,232,0.4);
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 24px;
-        }
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.35s;
-            position: relative;
-        }
-        .project-card:hover {
-            border-color: rgba(59,130,246,0.5);
-            transform: translateY(-6px);
-            box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(59,130,246,0.2);
-        }
-        .card-visual {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .card-visual.v1 { background: linear-gradient(135deg, #050d1a 0%, #0a2040 50%, #0d3468 100%); }
-        .card-visual.v2 { background: linear-gradient(135deg, #050d1a 0%, #1a0a30 50%, #2d1060 100%); }
-        .card-visual.v3 { background: linear-gradient(135deg, #050d1a 0%, #001a1a 50%, #003340 100%); }
-        .card-visual.v4 { background: linear-gradient(135deg, #050d1a 0%, #1a1000 50%, #3d2a00 100%); }
-        .card-icon-bg {
-            font-size: 5rem;
-            opacity: 0.12;
-            position: absolute;
-            transition: transform 0.5s, opacity 0.5s;
-        }
-        .project-card:hover .card-icon-bg {
-            transform: scale(1.15);
-            opacity: 0.18;
-        }
-        .card-diagram {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-        }
-        .diag-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .diag-box {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 8px;
-            padding: 5px 12px;
-            font-family: 'DM Mono', monospace;
-            font-size: 0.65rem;
-            color: rgba(255,255,255,0.7);
-            white-space: nowrap;
-        }
-        .diag-box.highlight {
-            background: rgba(29,111,232,0.25);
-            border-color: rgba(59,130,246,0.5);
-            color: var(--blue-glow);
-        }
-        .diag-box.accent-box {
-            background: rgba(0,212,255,0.15);
-            border-color: rgba(0,212,255,0.4);
-            color: var(--accent);
-        }
-        .diag-arrow {
-            color: rgba(255,255,255,0.3);
-            font-size: 0.65rem;
-        }
-        .card-tags-top {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            z-index: 3;
-        }
-        .tag {
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            border-radius: 100px;
-        }
+        .filter-btn.active { background: var(--blue); color: #fff; box-shadow: 0 0 20px rgba(29,111,232,0.4); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(340px,1fr)); gap: 24px; }
+        .project-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.35s; }
+        .project-card:hover { border-color: rgba(59,130,246,0.5); transform: translateY(-6px); box-shadow: 0 32px 80px rgba(0,0,0,0.5); }
+        .card-visual { height: 200px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .card-visual.v1 { background: linear-gradient(135deg,#050d1a,#0a2040,#0d3468); }
+        .card-visual.v2 { background: linear-gradient(135deg,#050d1a,#1a0a30,#2d1060); }
+        .card-visual.v3 { background: linear-gradient(135deg,#050d1a,#001a1a,#003340); }
+        .card-visual.v4 { background: linear-gradient(135deg,#050d1a,#1a1000,#3d2a00); }
+        .card-icon-bg { font-size: 5rem; opacity: 0.12; position: absolute; transition: transform 0.5s,opacity 0.5s; }
+        .project-card:hover .card-icon-bg { transform: scale(1.15); opacity: 0.18; }
+        .card-diagram { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .diag-row { display: flex; align-items: center; gap: 6px; }
+        .diag-box { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 5px 12px; font-family: 'DM Mono',monospace; font-size: 0.65rem; color: rgba(255,255,255,0.7); white-space: nowrap; }
+        .diag-box.highlight { background: rgba(29,111,232,0.25); border-color: rgba(59,130,246,0.5); color: var(--blue-glow); }
+        .diag-box.accent-box { background: rgba(0,212,255,0.15); border-color: rgba(0,212,255,0.4); color: var(--accent); }
+        .diag-arrow { color: rgba(255,255,255,0.3); font-size: 0.65rem; }
+        .card-tags-top { position: absolute; top: 14px; left: 14px; display: flex; gap: 6px; flex-wrap: wrap; z-index: 3; }
+        .tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
         .card-body { padding: 28px; display: flex; flex-direction: column; flex: 1; }
-        .card-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.55rem;
-            color: var(--white);
-            margin-bottom: 10px;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-        .card-subtitle {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-family: 'DM Mono', monospace;
-        }
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--slate);
-            line-height: 1.75;
-            font-weight: 300;
-            flex: 1;
-            margin-bottom: 20px;
-        }
-        .card-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 24px;
-        }
-        .stack-pill {
-            font-size: 0.75rem;
-            font-family: 'DM Mono', monospace;
-            color: var(--slate);
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-        .card-actions {
-            display: flex;
-            gap: 10px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .btn-card-primary {
-            flex: 1;
-            text-align: center;
-            background: rgba(29,111,232,0.2);
-            color: var(--blue-glow);
-            border: 1px solid rgba(29,111,232,0.35);
-            padding: 11px 16px;
-            border-radius: 10px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        .btn-card-primary:hover {
-            background: rgba(29,111,232,0.35);
-            border-color: var(--blue-bright);
-            color: #fff;
-        }
+        .card-title { font-family: 'DM Serif Display',serif; font-size: 1.55rem; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+        .card-subtitle { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-family: 'DM Mono',monospace; }
+        .card-desc { font-size: 0.95rem; color: var(--slate); line-height: 1.75; font-weight: 300; flex: 1; margin-bottom: 20px; }
+        .card-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+        .stack-pill { font-size: 0.75rem; font-family: 'DM Mono',monospace; color: var(--slate); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; }
+        .card-actions { display: flex; gap: 10px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .btn-card-primary { flex: 1; text-align: center; background: rgba(29,111,232,0.2); color: var(--blue-glow); border: 1px solid rgba(29,111,232,0.35); padding: 11px 16px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-card-primary:hover { background: rgba(29,111,232,0.35); color: #fff; }
+
+        /* ── CONTACT ── */
         .contact-section { padding-bottom: 120px; }
-        .contact-desc {
-            color: var(--slate-light);
-            font-size: 1.1rem;
-            line-height: 1.75;
-            font-weight: 300;
-            max-width: 720px;
-            margin-bottom: 48px;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 16px;
-        }
-        .contact-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 26px;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            transition: all 0.25s;
-        }
-        .contact-card:hover {
-            border-color: rgba(59,130,246,0.4);
-            background: var(--card-bg-hover);
-            transform: translateY(-3px);
-        }
-        .contact-card i {
-            font-size: 1.7rem;
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-        .contact-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--slate);
-        }
-        .contact-val {
-            font-size: 0.98rem;
-            color: var(--white);
-            font-weight: 500;
-            word-break: break-word;
-        }
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 40px;
-            text-align: center;
-            color: var(--slate);
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
-        }
+        .contact-desc { color: var(--slate-light); font-size: 1.1rem; line-height: 1.75; font-weight: 300; max-width: 720px; margin-bottom: 48px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 16px; }
+        .contact-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 26px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; transition: all 0.25s; }
+        .contact-card:hover { border-color: rgba(59,130,246,0.4); background: var(--card-bg-hover); transform: translateY(-3px); }
+        .contact-card i { font-size: 1.7rem; color: var(--accent); margin-bottom: 12px; }
+        .contact-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); }
+        .contact-val { font-size: 0.98rem; color: var(--white); font-weight: 500; word-break: break-word; }
+
+        footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px; text-align: center; color: var(--slate); font-size: 0.9rem; z-index: 1; position: relative; }
         footer span { color: var(--accent); }
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 0.7s forwards;
-        }
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.25s; }
-        .delay-3 { animation-delay: 0.4s; }
+        .fade-up { opacity: 0; transform: translateY(30px); animation: fadeUp 0.7s forwards; }
+        @keyframes fadeUp { to{opacity:1;transform:translateY(0)} }
+        .delay-1{animation-delay:0.1s} .delay-2{animation-delay:0.25s} .delay-3{animation-delay:0.4s}
+
         @media(max-width:768px){
-            html { font-size: 16px; }
-            nav { padding: 16px 20px; }
-            .nav-links { gap: 16px; }
-            .nav-links a:not(.icon-link) { display: none; }
-            section { padding: 70px 20px; }
-            .pub-card { padding: 24px 22px; }
-            .pub-title { font-size: 1.2rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .grants-grid { grid-template-columns: 1fr; }
-            .stats-row { gap: 24px; }
-            .stat-num { font-size: 2.2rem; }
+            html{font-size:16px} nav{padding:16px 20px}
+            .nav-links{gap:16px} .nav-links a:not(.icon-link){display:none}
+            section{padding:70px 20px} .pub-card{padding:24px 22px}
+            .projects-grid,.explore-grid,.grants-grid{grid-template-columns:1fr}
+            .stats-row{gap:24px} .stat-num{font-size:2.2rem}
         }
     </style>
 </head>
@@ -868,10 +342,11 @@
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
         <a href="#grants">Grants</a>
+        <a href="#explore">Research</a>
         <a href="#engineering">Engineering</a>
-        <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en" target="_blank" class="icon-link" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://orcid.org/0000-0001-8828-2978" target="_blank" class="icon-link" title="ORCID"><i class="fab fa-orcid"></i></a>
-        <a href="https://github.com/Sarvarbek-Erniyazov" target="_blank" class="icon-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en" target="_blank" class="icon-link"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://orcid.org/0000-0001-8828-2978" target="_blank" class="icon-link"><i class="fab fa-orcid"></i></a>
+        <a href="https://github.com/Sarvarbek-Erniyazov" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
     </div>
 </nav>
 
@@ -880,12 +355,10 @@
     <div class="hero-glow2"></div>
     <div class="hero-content">
         <div class="hero-badge fade-up">PhD Candidate · AI Lab · Chonnam National University</div>
-        <h1 class="hero-title fade-up delay-1">
-            Sarvarbek<br><span class="accent-word">Erniyazov</span>
-        </h1>
+        <h1 class="hero-title fade-up delay-1">Sarvarbek<br><span class="accent-word">Erniyazov</span></h1>
         <p class="hero-tagline fade-up delay-2">
-            Graph Neural Networks · Federated Learning · Mixture-of-Experts · LLMs
-            <span class="tagline-sub">Building intelligent systems for energy, infrastructure, and scientific applications</span>
+            Graph Neural Networks · Federated Learning · Mixture-of-Experts · LLMs · Physical AI
+            <span class="tagline-sub">Building intelligent systems across energy, vision, and safety-critical applications</span>
         </p>
         <div class="hero-btns fade-up delay-3">
             <a href="#publications" class="btn-primary">View Publications</a>
@@ -900,7 +373,7 @@
     <p class="section-label">// About</p>
     <div class="about-grid">
         <div>
-            <h2 class="section-title">AI researcher in <em>spatio-temporal</em><br>and <em>federated</em> learning</h2>
+            <h2 class="section-title">AI researcher across <em>spatio-temporal</em>, <em>multimodal</em>, and <em>physical</em> intelligence</h2>
             <div class="about-divider"></div>
             <div class="stats-row">
                 <div class="stat">
@@ -924,27 +397,24 @@
                 <strong>Graph Neural Networks</strong>, <strong>Federated Learning</strong>,
                 <strong>Mixture-of-Experts</strong> architectures, and <strong>Language Models</strong>
                 for real-world intelligent systems.<br><br>
-                Through participation in four national R&amp;D grants funded by the Korean Ministry of
-                Education, NRF, TIPA, and INNOPOLIS Foundation, I have contributed to applied research
-                in <strong>energy forecasting</strong>, <strong>virtual power plants</strong>,
-                <strong>satellite-ground data integration</strong>, and <strong>AI-based anomaly detection</strong>
-                for power infrastructure.<br><br>
-                I am committed to building <strong>trustworthy and reproducible ML systems</strong> —
-                robust to distribution shift, transparent in reasoning, and auditable across the full
-                lifecycle from data ingestion to deployment.
+                Through four national R&amp;D grants (NRF, TIPA, INNOPOLIS), I have contributed to
+                applied research in <strong>energy forecasting</strong>, <strong>virtual power plants</strong>,
+                <strong>satellite-ground data integration</strong>, and <strong>AI-based anomaly detection</strong>.
+                I am actively expanding into <strong>Physical AI</strong>, <strong>multimodal vision systems</strong>,
+                and <strong>safety-critical AI applications</strong>.
             </p>
         </div>
     </div>
-
     <div class="interests-block">
         <div class="interests-label">// Open to research collaborations in</div>
         <p class="interests-text">
-            <strong>Foundation models &amp; LLMs</strong> for time-series and scientific data ·
-            <strong>Generative AI</strong> for engineering design and simulation ·
-            <strong>Multimodal learning</strong> for complex physical systems ·
-            <strong>Aerospace &amp; satellite AI</strong> ·
-            <strong>Physical AI</strong> and on-device intelligence ·
-            <strong>AI for advanced manufacturing</strong> and smart infrastructure
+            <strong>Foundation models &amp; LLMs</strong> for scientific data ·
+            <strong>Visual Language Models (VLMs)</strong> for real-world perception ·
+            <strong>Physical AI &amp; embodied intelligence</strong> ·
+            <strong>Privacy-preserving AI</strong> for healthcare and safety ·
+            <strong>Multimodal fusion</strong> for complex physical systems ·
+            <strong>Cybersecurity AI</strong> and deepfake detection ·
+            <strong>AI for smart city &amp; advanced mobility</strong>
         </p>
     </div>
 </section>
@@ -952,7 +422,7 @@
 <section id="publications">
     <p class="section-label">// Publications</p>
     <h2 class="section-title">Selected research</h2>
-    <p class="section-subtitle">Peer-reviewed publications across AI for energy systems and quantum-dot cellular automata.</p>
+    <p class="section-subtitle">Peer-reviewed publications across AI for energy systems and hardware design.</p>
 
     <div class="pub-section-divider">
         <span class="divider-label">Recent AI Research · 2024–2026</span>
@@ -960,7 +430,6 @@
     </div>
 
     <div class="pub-list">
-
         <article class="pub-card featured">
             <div class="pub-meta-row">
                 <span class="pub-year">2025</span>
@@ -971,11 +440,7 @@
             </div>
             <h3 class="pub-title">Fed-ST-MoE: A Federated Spatio-Temporal GNN with Mixture-of-Experts for Heterogeneous Building Energy and Demand Forecasting</h3>
             <p class="pub-authors"><strong>S. Erniyazov</strong>, et al.</p>
-            <p class="pub-abstract">
-                A federated learning framework combining spatio-temporal graph neural networks
-                with mixture-of-experts routing to handle heterogeneous building energy patterns
-                while preserving data privacy across distributed sites.
-            </p>
+            <p class="pub-abstract">Federated learning framework combining spatio-temporal GNNs with MoE routing for heterogeneous building energy forecasting while preserving data privacy across distributed sites.</p>
             <div class="pub-actions">
                 <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
                 <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
@@ -993,16 +458,10 @@
             </div>
             <h3 class="pub-title">A Multimodal Fusion Framework for Solar Forecasting using Dynamic GNNs and Mixture of Experts</h3>
             <p class="pub-authors"><strong>S. Erniyazov</strong>, M. A. Jaleel, C. G. Lim, S. B. Ha</p>
-            <p class="pub-abstract">
-                A four-modality fusion architecture (sky imagery, satellite, ground sensors, NAM mesoscale fields)
-                with meteorology-driven dynamic GNN adjacency and horizon-aware MoE routing.
-                Achieves <strong>49% forecast skill</strong> over the NAM physical model and 15% RMSE reduction
-                on day-ahead solar forecasting versus state-of-the-art Transformers.
-            </p>
+            <p class="pub-abstract">Four-modality fusion (sky imagery, satellite, ground sensors, NAM fields) with meteorology-driven dynamic GNN and horizon-aware MoE. Achieves <strong>49% forecast skill</strong> over NAM physical model and 15% RMSE reduction on day-ahead solar forecasting.</p>
             <div class="pub-actions">
                 <a href="https://doi.org/10.3837/tiis.2026.03.012" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                <a href="assets/papers/2026-ksii-multimodal-gnn-moe.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                <a href="assets/papers/2026-ksii-multimodal.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
             </div>
         </article>
@@ -1017,16 +476,10 @@
             </div>
             <h3 class="pub-title">GNN-enhanced temporal patch segmentation and frequency fusion model for robust solar energy production forecasting</h3>
             <p class="pub-authors"><strong>S. Erniyazov</strong>, C. G. Lim</p>
-            <p class="pub-abstract">
-                Hybrid architecture integrating Graph Neural Networks with Temporal Patch Segmentation
-                and Frequency Fusion (TPS-FF) for multi-station PV forecasting. Reduces MSE by
-                <strong>46% at 12h horizon</strong> and 21% at 72h horizon compared to PatchTST,
-                Crossformer, PatchMixer, and Fredformer baselines.
-            </p>
+            <p class="pub-abstract">GNN + Temporal Patch Segmentation + Frequency Fusion for multi-station PV forecasting. Reduces MSE by <strong>46% at 12h horizon</strong> and 21% at 72h versus PatchTST, Crossformer, PatchMixer, Fredformer.</p>
             <div class="pub-actions">
                 <a href="https://doi.org/10.1016/j.egyr.2025.03.063" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                <a href="assets/papers/2025-energy-reports-gnn-tps-ff.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
+                <a href="assets/papers/2025-energy-reports.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
             </div>
         </article>
@@ -1041,27 +494,21 @@
             </div>
             <h3 class="pub-title">Comprehensive Analysis and Improved Techniques for Anomaly Detection in Time Series Data with Autoencoder Models</h3>
             <p class="pub-authors"><strong>S. Erniyazov</strong>, Y.-M. Kim, M. A. Jaleel, C. G. Lim</p>
-            <p class="pub-abstract">
-                Comparative study of Autoencoder and LSTM-Autoencoder architectures for industrial
-                control system anomaly detection on the HAI security dataset. LSTM-Autoencoder achieves
-                <strong>99% accuracy</strong> with F1=0.987 in real-time anomaly detection scenarios.
-            </p>
+            <p class="pub-abstract">LSTM-Autoencoder vs Autoencoder for industrial control system anomaly detection (HAI security dataset). LSTM-Autoencoder achieves <strong>99% accuracy</strong>, F1=0.987 in real-time scenarios.</p>
             <div class="pub-actions">
                 <a href="https://doi.org/10.18517/ijaseit.14.6.20716" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                <a href="assets/papers/2024-ijaseit-anomaly-detection.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="assets/papers/2024-anomaly-detection.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
             </div>
         </article>
-
     </div>
 
     <div class="pub-section-divider">
-        <span class="divider-label">Earlier Work · QCA Hardware Design · 2017–2019</span>
+        <span class="divider-label">QCA Hardware Design · 2017–2019</span>
         <div class="divider-line"></div>
     </div>
 
     <div class="pub-list">
-
         <article class="pub-card legacy-featured">
             <div class="pub-meta-row">
                 <span class="pub-year">2019</span>
@@ -1072,98 +519,49 @@
             </div>
             <h3 class="pub-title">Carry save adder and carry look ahead adder using inverter chain based coplanar QCA full adder for low energy dissipation</h3>
             <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
-            <p class="pub-abstract">
-                Novel coplanar Quantum-dot Cellular Automata (QCA) full adder, carry save adder,
-                and carry look-ahead adder designs achieving significant reductions in cell count,
-                area, and energy dissipation. The CLA implementation reduces area by over 50% and
-                operates at THz speeds, demonstrating QCA's potential as a successor to CMOS.
-            </p>
+            <p class="pub-abstract">Novel coplanar QCA full adder, CSA, and CLA designs with significant reductions in cell count, area, and energy dissipation. CLA reduces area by over 50%, operating at THz speeds.</p>
             <div class="pub-actions">
                 <a href="https://doi.org/10.1016/j.mee.2019.03.015" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                <a href="assets/papers/2019-microelectronic-qca-fa-csa-cla.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="assets/papers/2019-qca-microelectronic.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
             </div>
         </article>
-
     </div>
 
     <div class="earlier-work">
         <button class="toggle-earlier" id="toggleEarlier">
             <i class="fas fa-chevron-right toggle-icon"></i>
-            <span>View additional QCA publications (2017–2018) · 8 papers · 25+ citations</span>
+            <span>Additional QCA publications (2017–2018) · 8 papers · 25+ citations</span>
         </button>
         <div class="earlier-list" id="earlierList">
             <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2018</span>
-                    <span class="pub-venue">Adv. Science Technology Letters · 150, 75–79</span>
-                    <span class="pub-citations">16 citations</span>
-                </div>
+                <div class="pub-meta-row"><span class="pub-year">2018</span><span class="pub-venue">Adv. Science Technology Letters · 150, 75–79</span><span class="pub-citations">16 citations</span></div>
                 <h4 class="pub-title-sm">Area efficient magnitude comparator based on QCA</h4>
                 <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
             </article>
             <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Advanced Science Letters · 23(10), 10092–10096</span>
-                    <span class="pub-citations">2 citations</span>
-                </div>
+                <div class="pub-meta-row"><span class="pub-year">2017</span><span class="pub-venue">Advanced Science Letters · 23(10)</span><span class="pub-citations">2 citations</span></div>
                 <h4 class="pub-title-sm">Implementation of area efficient Fredkin gate for compact reversible QCA circuit</h4>
                 <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
             </article>
             <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Advanced Science Letters · 23(10), 10112–10117</span>
-                    <span class="pub-citations">2 citations</span>
-                </div>
+                <div class="pub-meta-row"><span class="pub-year">2017</span><span class="pub-venue">Advanced Science Letters · 23(10)</span><span class="pub-citations">2 citations</span></div>
                 <h4 class="pub-title-sm">Coplanar Subtractor Design in QCA for Arithmetic Circuit Design</h4>
                 <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
             </article>
             <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Advanced Science Letters · 23(10), 9852–9856</span>
-                </div>
+                <div class="pub-meta-row"><span class="pub-year">2017</span><span class="pub-venue">Advanced Science Letters · 23(10)</span></div>
                 <h4 class="pub-title-sm">Reversible Circuit Design in QCA Based on Double Feynman Gate</h4>
                 <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
             </article>
             <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Proc. International Workshop on Future Technology · 1(1)</span>
-                </div>
-                <h4 class="pub-title-sm">Half Subtractor in QCA for Arithmetic Circuits</h4>
-                <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
-            </article>
-            <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Proc. International Workshop on Future Technology · 1(1)</span>
-                </div>
-                <h4 class="pub-title-sm">Reliable Design of Reversible Fredkin Gate in QCA</h4>
-                <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
-            </article>
-            <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Proc. KIIT Conference</span>
-                </div>
-                <h4 class="pub-title-sm">Area Efficient Reversible FG Using Quantum-Dot Cellular Automata</h4>
-                <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
-            </article>
-            <article class="pub-card compact">
-                <div class="pub-meta-row">
-                    <span class="pub-year">2017</span>
-                    <span class="pub-venue">Proc. International Workshop on Future Technology</span>
-                </div>
-                <h4 class="pub-title-sm">Design of Double Feynman Gate in QCA Technology</h4>
+                <div class="pub-meta-row"><span class="pub-year">2017</span><span class="pub-venue">Proc. IKIIT Conference & Int. Workshop on Future Technology</span></div>
+                <h4 class="pub-title-sm">Half Subtractor · Reliable Fredkin Gate · Area Efficient FG · Double Feynman Gate · Reversible Toffoli Gate (5 conference papers)</h4>
                 <p class="pub-authors"><strong>S. Erniyazov</strong>, J.-C. Jeon</p>
             </article>
             <p class="earlier-note">
                 <i class="fas fa-info-circle"></i>
-                Full publication list available on <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                and <a href="https://orcid.org/0000-0001-8828-2978" target="_blank">ORCID</a>.
+                Full list on <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en" target="_blank">Google Scholar</a> · <a href="https://orcid.org/0000-0001-8828-2978" target="_blank">ORCID</a>
             </p>
         </div>
     </div>
@@ -1172,38 +570,27 @@
 <section id="grants">
     <p class="section-label">// Research Grants</p>
     <h2 class="section-title">National R&amp;D projects</h2>
-    <p class="section-subtitle">Active and submitted research grants from Korean national funding agencies (NRF, TIPA, INNOPOLIS).</p>
-
+    <p class="section-subtitle">Active and submitted grants from Korean national funding agencies (NRF, TIPA, INNOPOLIS).</p>
     <div class="grants-grid">
-
         <article class="grant-card active">
             <div class="grant-status"><i class="fas fa-circle"></i> Active · 2026–2028</div>
             <div class="grant-id">RS-2026-25529976 · TIPA · Industry-Academia Commercialization R&D</div>
             <h3 class="grant-title">sLM·LMM Cooperative VPP Platform for On-device AI and Cloud-integrated Energy Management</h3>
             <p class="grant-funder">Korea Technology and Information Promotion Agency (TIPA)</p>
-            <p class="grant-desc">
-                Development of a Virtual Power Plant platform leveraging small Language Models (sLM)
-                and Large Multimodal Models (LMM) in cooperative architecture for data-centric energy
-                management across edge devices and cloud infrastructure.
-            </p>
+            <p class="grant-desc">Virtual Power Plant platform leveraging small Language Models and Large Multimodal Models in cooperative architecture for data-centric energy management across edge and cloud.</p>
             <div class="grant-tags">
                 <span class="pub-tag tag-purple">LLMs</span>
                 <span class="pub-tag tag-cyan">Edge AI</span>
-                <span class="pub-tag tag-emerald">Energy Systems</span>
+                <span class="pub-tag tag-emerald">Energy</span>
                 <span class="pub-tag tag-blue">VPP</span>
             </div>
         </article>
-
         <article class="grant-card review">
             <div class="grant-status"><i class="fas fa-hourglass-half"></i> Under Review · 2025</div>
             <div class="grant-id">RS-2025-00564485 · NRF · Excellent Research / Mid-career Type 1</div>
-            <h3 class="grant-title">sML-based Satellite–Ground Data Integration for Solar Energy Variability Management and Virtual Power Plant Platform</h3>
+            <h3 class="grant-title">sML-based Satellite–Ground Data Integration for Solar Energy Variability Management and VPP Platform</h3>
             <p class="grant-funder">National Research Foundation of Korea (NRF) · Ministry of Education</p>
-            <p class="grant-desc">
-                Research on integrating satellite and ground sensor data using small Language Models
-                with Mixture-of-Experts architectures, applied to solar energy variability prediction
-                and virtual power plant operations.
-            </p>
+            <p class="grant-desc">Satellite and ground sensor data integration via sML with MoE architectures for solar energy variability prediction and virtual power plant operations.</p>
             <div class="grant-tags">
                 <span class="pub-tag tag-purple">MoE</span>
                 <span class="pub-tag tag-pink">Satellite AI</span>
@@ -1211,38 +598,163 @@
                 <span class="pub-tag tag-cyan">sML</span>
             </div>
         </article>
-
         <article class="grant-card review">
             <div class="grant-status"><i class="fas fa-hourglass-half"></i> Under Review · 2026</div>
             <div class="grant-id">RS-2026-25550513 · INNOPOLIS · Tech Transfer & Commercialization</div>
             <h3 class="grant-title">Global Validation and Commercialization of AI-based Power Equipment Anomaly Detection and Preventive Control Solution</h3>
-            <p class="grant-funder">INNOPOLIS Foundation · Special Research & Development Zone</p>
-            <p class="grant-desc">
-                AI-driven anomaly detection and preventive control system for power infrastructure
-                equipment, targeting global validation and commercial deployment in critical energy
-                infrastructure.
-            </p>
+            <p class="grant-funder">INNOPOLIS Foundation · Special R&D Zone</p>
+            <p class="grant-desc">AI-driven anomaly detection and preventive control for power infrastructure, targeting global validation and commercial deployment in critical energy systems.</p>
             <div class="grant-tags">
                 <span class="pub-tag tag-purple">Anomaly Detection</span>
                 <span class="pub-tag tag-blue">Power Systems</span>
                 <span class="pub-tag tag-amber">Industrial AI</span>
             </div>
         </article>
-
         <article class="grant-card completed">
             <div class="grant-status"><i class="fas fa-check"></i> Completed · 2025</div>
             <div class="grant-id">RS-2025-02312851 · TIPA · Industry-Academia Preliminary Research</div>
             <h3 class="grant-title">On-device AI and Cloud-integrated Data-centric Energy Management: sLM·LMM Cooperative VPP Platform (Preliminary Study)</h3>
             <p class="grant-funder">Korea Technology and Information Promotion Agency (TIPA)</p>
-            <p class="grant-desc">
-                Foundational feasibility study establishing the technical groundwork for the
-                ongoing commercialization R&D project on cooperative sLM·LMM architectures for
-                virtual power plant platforms.
-            </p>
+            <p class="grant-desc">Foundational feasibility study for cooperative sLM·LMM architectures for virtual power plant platforms — basis for the ongoing commercialization R&D.</p>
             <div class="grant-tags">
                 <span class="pub-tag tag-purple">LLMs</span>
                 <span class="pub-tag tag-cyan">Edge AI</span>
-                <span class="pub-tag tag-emerald">Energy Systems</span>
+                <span class="pub-tag tag-emerald">Energy</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ═══ EXPLORATORY RESEARCH PROJECTS ═══ -->
+<section id="explore">
+    <p class="section-label">// Exploratory Research</p>
+    <h2 class="section-title">Expanding research frontiers</h2>
+    <p class="section-subtitle">Upcoming projects aligned with Physical AI, multimodal vision, and safety-critical intelligence — key directions in next-generation AI+S&T research.</p>
+
+    <div class="explore-grid">
+
+        <!-- PROJECT 1: Traffic Accident VLM ⭐ #1 -->
+        <article class="explore-card hot">
+            <div class="explore-header">
+                <div class="explore-badges">
+                    <span class="hot-badge"><i class="fas fa-fire"></i> Physical AI · VLM</span>
+                    <span class="coming-badge"><i class="fas fa-code"></i> Coming Soon</span>
+                </div>
+                <span class="innocore-cluster">Advanced Mobility · Smart City</span>
+            </div>
+            <h3 class="explore-title">SmartGuard Vision</h3>
+            <p class="explore-subtitle">Traffic Accident Detection via Visual Language Models</p>
+            <p class="explore-desc">
+                An AI-driven traffic accident detection system leveraging <strong>Visual Large Language Models (VLMs)</strong>
+                for real-time scene understanding in smart city environments. Integrates multi-camera video streams,
+                spatio-temporal event reasoning, and natural language alerting pipelines for intelligent transportation
+                infrastructure. Validated on the IEEE DataPort traffic accident dataset.
+            </p>
+            <div class="explore-tags">
+                <span class="pub-tag tag-rose">VLM</span>
+                <span class="pub-tag tag-blue">Smart City</span>
+                <span class="pub-tag tag-purple">Computer Vision</span>
+                <span class="pub-tag tag-amber">Real-time AI</span>
+            </div>
+            <div class="explore-links">
+                <a href="https://ieee-dataport.org/documents/traffic-accident-detection-video-dataset-ai-driven-computer-vision-systems-smart-city" target="_blank" class="explore-link">
+                    <i class="fas fa-database"></i> IEEE Dataset
+                </a>
+                <a href="#" class="explore-link"><i class="fab fa-github"></i> Code (soon)</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 2: Deepfake Audio ⭐ #2 -->
+        <article class="explore-card hot">
+            <div class="explore-header">
+                <div class="explore-badges">
+                    <span class="hot-badge"><i class="fas fa-fire"></i> Cybersecurity · Physical AI</span>
+                    <span class="coming-badge"><i class="fas fa-code"></i> Coming Soon</span>
+                </div>
+                <span class="innocore-cluster">Cybersecurity · AI Models</span>
+            </div>
+            <h3 class="explore-title">RADAR AudioShield</h3>
+            <p class="explore-subtitle">Robust Audio Deepfake Recognition under Media Transformations</p>
+            <p class="explore-desc">
+                A robust deepfake audio detection system designed to remain reliable under diverse
+                <strong>real-world media transformations</strong> (compression, re-encoding, noise).
+                Contributes to the RADAR Challenge benchmark with novel <strong>Physical AI-inspired</strong>
+                signal processing approaches — acoustic feature extraction under channel distortion,
+                directly applicable to Korea's national cybersecurity priorities.
+            </p>
+            <div class="explore-tags">
+                <span class="pub-tag tag-rose">Deepfake Detection</span>
+                <span class="pub-tag tag-purple">Audio AI</span>
+                <span class="pub-tag tag-cyan">Cybersecurity</span>
+                <span class="pub-tag tag-blue">Physical AI</span>
+            </div>
+            <div class="explore-links">
+                <a href="https://radar-challenge.github.io/" target="_blank" class="explore-link">
+                    <i class="fas fa-trophy"></i> RADAR Challenge
+                </a>
+                <a href="#" class="explore-link"><i class="fab fa-github"></i> Code (soon)</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 3: Fall Detection #3 -->
+        <article class="explore-card warm">
+            <div class="explore-header">
+                <div class="explore-badges">
+                    <span class="hot-badge" style="background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.3);color:var(--accent);">
+                        <i class="fas fa-heart-pulse"></i> Bio-Integrated Physical AI
+                    </span>
+                    <span class="coming-badge"><i class="fas fa-code"></i> Coming Soon</span>
+                </div>
+                <span class="innocore-cluster">Healthcare AI · Privacy</span>
+            </div>
+            <h3 class="explore-title">ThermalGuard</h3>
+            <p class="explore-subtitle">Privacy-Safe Fall Detection via Thermal Imaging</p>
+            <p class="explore-desc">
+                Fall detection system for elderly care using <strong>thermal (infrared) cameras</strong>
+                that preserve privacy by capturing body heat signatures instead of identifiable visual data.
+                Addresses Korea's rapidly aging population with a sensor fusion approach combining
+                thermal imaging and pose estimation — aligned with the <strong>Bio-Integrated Physical AI</strong>
+                cluster at DGIST/GIST.
+            </p>
+            <div class="explore-tags">
+                <span class="pub-tag tag-emerald">Healthcare AI</span>
+                <span class="pub-tag tag-cyan">Thermal Imaging</span>
+                <span class="pub-tag tag-pink">Privacy-Preserving</span>
+                <span class="pub-tag tag-blue">Edge Deployment</span>
+            </div>
+            <div class="explore-links">
+                <a href="#" class="explore-link"><i class="fab fa-github"></i> Code (soon)</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: Crowd Detection #4 -->
+        <article class="explore-card warm">
+            <div class="explore-header">
+                <div class="explore-badges">
+                    <span class="hot-badge" style="background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.3);color:var(--accent);">
+                        <i class="fas fa-drone"></i> Drone AI · Physical AI
+                    </span>
+                    <span class="coming-badge"><i class="fas fa-code"></i> Coming Soon</span>
+                </div>
+                <span class="innocore-cluster">Advanced Mobility · Robotics</span>
+            </div>
+            <h3 class="explore-title">CrowdEye</h3>
+            <p class="explore-subtitle">Real-time Crowd Detection and Human Counting from Drone &amp; Camera Views</p>
+            <p class="explore-desc">
+                Real-time crowd density estimation and human counting system operating across
+                <strong>drone aerial</strong> and <strong>fixed camera</strong> viewpoints.
+                Multi-scale detection handles extreme density variations, occlusion, and
+                perspective distortion — enabling public safety applications, event management,
+                and smart infrastructure monitoring in urban environments.
+            </p>
+            <div class="explore-tags">
+                <span class="pub-tag tag-blue">Drone AI</span>
+                <span class="pub-tag tag-purple">Computer Vision</span>
+                <span class="pub-tag tag-amber">Real-time</span>
+                <span class="pub-tag tag-emerald">Smart City</span>
+            </div>
+            <div class="explore-links">
+                <a href="#" class="explore-link"><i class="fab fa-github"></i> Code (soon)</a>
             </div>
         </article>
 
@@ -1253,229 +765,107 @@
     <p class="section-label">// Engineering Projects</p>
     <h2 class="section-title">Production ML systems</h2>
     <p class="section-subtitle">End-to-end engineering work demonstrating MLOps and trustworthy AI in practice.</p>
-
     <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="trustworthy-ai">Trustworthy AI</button>
         <button class="filter-btn" data-filter="mlops">MLOps</button>
         <button class="filter-btn" data-filter="fintech-ai">FinTech AI</button>
     </div>
-
     <div class="projects-grid" id="projects-grid">
-
         <article class="project-card" data-category="fintech-ai trustworthy-ai">
             <div class="card-visual v1">
                 <i class="fas fa-shield-halved card-icon-bg" style="color:#3b82f6;"></i>
-                <div class="card-tags-top">
-                    <span class="tag tag-blue">FinTech AI</span>
-                    <span class="tag tag-cyan">Trustworthy AI</span>
-                </div>
+                <div class="card-tags-top"><span class="tag tag-blue">FinTech AI</span><span class="tag tag-cyan">Trustworthy AI</span></div>
                 <div class="card-diagram">
-                    <div class="diag-row">
-                        <div class="diag-box">Raw Transactions</div>
-                        <span class="diag-arrow">→</span>
-                        <div class="diag-box highlight">Feature Engine</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box highlight">Fraud Model</div>
-                        <span class="diag-arrow">+</span>
-                        <div class="diag-box highlight">Credit Model</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box accent-box">SHAP · Counterfactual</div>
-                    </div>
+                    <div class="diag-row"><div class="diag-box">Raw Transactions</div><span class="diag-arrow">→</span><div class="diag-box highlight">Feature Engine</div></div>
+                    <div class="diag-row"><div class="diag-box highlight">Fraud Model</div><span class="diag-arrow">+</span><div class="diag-box highlight">Credit Model</div></div>
+                    <div class="diag-row"><div class="diag-box accent-box">SHAP · Counterfactual</div></div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-subtitle">Dual-Task Financial Risk System</div>
                 <h3 class="card-title">FinRiskGuard</h3>
-                <p class="card-desc">
-                    End-to-end ML framework combining fraud detection and credit risk
-                    scoring on 590K+ real transactions. Time-aware CV, imbalance handling,
-                    SHAP explainability, and counterfactual reasoning.
-                </p>
-                <div class="card-stack">
-                    <span class="stack-pill">XGBoost</span>
-                    <span class="stack-pill">SHAP</span>
-                    <span class="stack-pill">FastAPI</span>
-                    <span class="stack-pill">Docker</span>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/Sarvarbek-Erniyazov/FinRiskGuard" target="_blank" class="btn-card-primary">
-                        <i class="fab fa-github" style="margin-right:6px;"></i>View Code
-                    </a>
-                </div>
+                <p class="card-desc">End-to-end ML framework combining fraud detection and credit risk scoring on 590K+ real transactions. Time-aware CV, imbalance handling, SHAP explainability.</p>
+                <div class="card-stack"><span class="stack-pill">XGBoost</span><span class="stack-pill">SHAP</span><span class="stack-pill">FastAPI</span><span class="stack-pill">Docker</span></div>
+                <div class="card-actions"><a href="https://github.com/Sarvarbek-Erniyazov/FinRiskGuard" target="_blank" class="btn-card-primary"><i class="fab fa-github" style="margin-right:6px;"></i>View Code</a></div>
             </div>
         </article>
-
         <article class="project-card" data-category="trustworthy-ai mlops">
             <div class="card-visual v2">
                 <i class="fas fa-satellite-dish card-icon-bg" style="color:#a78bfa;"></i>
-                <div class="card-tags-top">
-                    <span class="tag tag-purple">Trustworthy AI</span>
-                    <span class="tag tag-blue">MLOps</span>
-                </div>
+                <div class="card-tags-top"><span class="tag tag-purple">Trustworthy AI</span><span class="tag tag-blue">MLOps</span></div>
                 <div class="card-diagram">
-                    <div class="diag-row">
-                        <div class="diag-box">Live Data</div>
-                        <span class="diag-arrow">→</span>
-                        <div class="diag-box highlight">Drift Detector</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box highlight">Adversarial Test</div>
-                        <span class="diag-arrow">+</span>
-                        <div class="diag-box accent-box">UQ Layer</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box">Alert · Dashboard</div>
-                    </div>
+                    <div class="diag-row"><div class="diag-box">Live Data</div><span class="diag-arrow">→</span><div class="diag-box highlight">Drift Detector</div></div>
+                    <div class="diag-row"><div class="diag-box highlight">Adversarial Test</div><span class="diag-arrow">+</span><div class="diag-box accent-box">UQ Layer</div></div>
+                    <div class="diag-row"><div class="diag-box">Alert · Dashboard</div></div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-subtitle">ML Reliability Engineering</div>
                 <h3 class="card-title">DriftSentinel</h3>
-                <p class="card-desc">
-                    ML model reliability toolkit — data &amp; concept drift detection,
-                    adversarial stress-testing, and uncertainty quantification via
-                    conformal prediction for auditable production systems.
-                </p>
-                <div class="card-stack">
-                    <span class="stack-pill">Evidently</span>
-                    <span class="stack-pill">MAPIE</span>
-                    <span class="stack-pill">Alibi Detect</span>
-                    <span class="stack-pill">Docker</span>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/Sarvarbek-Erniyazov/DriftSentinel" target="_blank" class="btn-card-primary">
-                        <i class="fab fa-github" style="margin-right:6px;"></i>View Code
-                    </a>
-                </div>
+                <p class="card-desc">ML reliability toolkit — drift detection, adversarial stress-testing, and uncertainty quantification via conformal prediction for auditable production systems.</p>
+                <div class="card-stack"><span class="stack-pill">Evidently</span><span class="stack-pill">MAPIE</span><span class="stack-pill">Alibi Detect</span><span class="stack-pill">Docker</span></div>
+                <div class="card-actions"><a href="https://github.com/Sarvarbek-Erniyazov/DriftSentinel" target="_blank" class="btn-card-primary"><i class="fab fa-github" style="margin-right:6px;"></i>View Code</a></div>
             </div>
         </article>
-
         <article class="project-card" data-category="mlops">
             <div class="card-visual v3">
                 <i class="fas fa-flask card-icon-bg" style="color:#00d4ff;"></i>
-                <div class="card-tags-top">
-                    <span class="tag tag-cyan">MLOps</span>
-                    <span class="tag tag-emerald">Reproducibility</span>
-                </div>
+                <div class="card-tags-top"><span class="tag tag-cyan">MLOps</span><span class="tag tag-emerald">Reproducibility</span></div>
                 <div class="card-diagram">
-                    <div class="diag-row">
-                        <div class="diag-box accent-box">Experiment v1..vN</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box highlight">MLflow Registry</div>
-                        <span class="diag-arrow">→</span>
-                        <div class="diag-box">Auto-Doc</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box">Reproduce · Compare · Share</div>
-                    </div>
+                    <div class="diag-row"><div class="diag-box accent-box">Experiment v1..vN</div></div>
+                    <div class="diag-row"><div class="diag-box highlight">MLflow Registry</div><span class="diag-arrow">→</span><div class="diag-box">Auto-Doc</div></div>
+                    <div class="diag-row"><div class="diag-box">Reproduce · Compare · Share</div></div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-subtitle">Scientific Reproducibility Platform</div>
                 <h3 class="card-title">ReproLab</h3>
-                <p class="card-desc">
-                    Automated ML experiment tracking with guaranteed reproducibility —
-                    parameters, metrics, data versions, and environment snapshots.
-                    Auto-generated documentation and one-click replay.
-                </p>
-                <div class="card-stack">
-                    <span class="stack-pill">MLflow</span>
-                    <span class="stack-pill">DVC</span>
-                    <span class="stack-pill">Hydra</span>
-                    <span class="stack-pill">Streamlit</span>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/Sarvarbek-Erniyazov/ReproLab" target="_blank" class="btn-card-primary">
-                        <i class="fab fa-github" style="margin-right:6px;"></i>View Code
-                    </a>
-                </div>
+                <p class="card-desc">Automated ML experiment tracking with guaranteed reproducibility — parameters, metrics, data versions, and environment snapshots. One-click replay.</p>
+                <div class="card-stack"><span class="stack-pill">MLflow</span><span class="stack-pill">DVC</span><span class="stack-pill">Hydra</span><span class="stack-pill">Streamlit</span></div>
+                <div class="card-actions"><a href="https://github.com/Sarvarbek-Erniyazov/ReproLab" target="_blank" class="btn-card-primary"><i class="fab fa-github" style="margin-right:6px;"></i>View Code</a></div>
             </div>
         </article>
-
         <article class="project-card" data-category="mlops">
             <div class="card-visual v4">
                 <i class="fas fa-bolt card-icon-bg" style="color:#fcd34d;"></i>
-                <div class="card-tags-top">
-                    <span class="tag tag-amber">MLOps</span>
-                    <span class="tag tag-blue">Production</span>
-                </div>
+                <div class="card-tags-top"><span class="tag tag-amber">MLOps</span><span class="tag tag-blue">Production</span></div>
                 <div class="card-diagram">
-                    <div class="diag-row">
-                        <div class="diag-box">Batch · Real-time</div>
-                        <span class="diag-arrow">→</span>
-                        <div class="diag-box highlight">Inference API</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box highlight">Drift Trigger</div>
-                        <span class="diag-arrow">→</span>
-                        <div class="diag-box accent-box">Auto-Retrain</div>
-                    </div>
-                    <div class="diag-row">
-                        <div class="diag-box">AWS ECS · CI/CD</div>
-                    </div>
+                    <div class="diag-row"><div class="diag-box">Batch · Real-time</div><span class="diag-arrow">→</span><div class="diag-box highlight">Inference API</div></div>
+                    <div class="diag-row"><div class="diag-box highlight">Drift Trigger</div><span class="diag-arrow">→</span><div class="diag-box accent-box">Auto-Retrain</div></div>
+                    <div class="diag-row"><div class="diag-box">AWS ECS · CI/CD</div></div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-subtitle">Self-Healing Production Pipeline</div>
                 <h3 class="card-title">AutoPulse</h3>
-                <p class="card-desc">
-                    Production ML system with autonomous lifecycle management — batch
-                    and real-time inference, drift monitoring, automatic retraining.
-                    Deployed on AWS ECS Fargate with full CI/CD.
-                </p>
-                <div class="card-stack">
-                    <span class="stack-pill">Airflow</span>
-                    <span class="stack-pill">FastAPI</span>
-                    <span class="stack-pill">AWS ECS</span>
-                    <span class="stack-pill">MLflow</span>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/Sarvarbek-Erniyazov/AutoPulse" target="_blank" class="btn-card-primary">
-                        <i class="fab fa-github" style="margin-right:6px;"></i>View Code
-                    </a>
-                </div>
+                <p class="card-desc">Production ML system with autonomous lifecycle management — batch and real-time inference, drift monitoring, automatic retraining on AWS ECS Fargate.</p>
+                <div class="card-stack"><span class="stack-pill">Airflow</span><span class="stack-pill">FastAPI</span><span class="stack-pill">AWS ECS</span><span class="stack-pill">MLflow</span></div>
+                <div class="card-actions"><a href="https://github.com/Sarvarbek-Erniyazov/AutoPulse" target="_blank" class="btn-card-primary"><i class="fab fa-github" style="margin-right:6px;"></i>View Code</a></div>
             </div>
         </article>
-
     </div>
 </section>
 
 <section id="contact" class="contact-section">
     <p class="section-label">// Contact</p>
     <h2 class="section-title">Get in touch</h2>
-    <p class="contact-desc">
-        Open to postdoctoral collaborations, research discussions, and industry partnerships
-        across AI for energy systems, foundation models, federated learning, and trustworthy ML.
-    </p>
+    <p class="contact-desc">Open to postdoctoral collaborations, research discussions, and industry partnerships across AI for energy systems, physical AI, foundation models, and trustworthy ML.</p>
     <div class="contact-grid">
         <a href="mailto:erniyazov_sarvarbek@jnu.ac.kr" class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <span class="contact-label">Email</span>
-            <span class="contact-val">erniyazov_sarvarbek@jnu.ac.kr</span>
+            <i class="fas fa-envelope"></i><span class="contact-label">Email</span><span class="contact-val">erniyazov_sarvarbek@jnu.ac.kr</span>
         </a>
         <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en" target="_blank" class="contact-card">
-            <i class="fas fa-graduation-cap"></i>
-            <span class="contact-label">Google Scholar</span>
-            <span class="contact-val">View profile →</span>
+            <i class="fas fa-graduation-cap"></i><span class="contact-label">Google Scholar</span><span class="contact-val">View profile →</span>
         </a>
         <a href="https://orcid.org/0000-0001-8828-2978" target="_blank" class="contact-card">
-            <i class="fab fa-orcid"></i>
-            <span class="contact-label">ORCID</span>
-            <span class="contact-val">0000-0001-8828-2978</span>
+            <i class="fab fa-orcid"></i><span class="contact-label">ORCID</span><span class="contact-val">0000-0001-8828-2978</span>
         </a>
         <a href="https://www.linkedin.com/in/sarvarbek-erniyazov-ba952b13a/" target="_blank" class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-val">Connect →</span>
+            <i class="fab fa-linkedin"></i><span class="contact-label">LinkedIn</span><span class="contact-val">Connect →</span>
         </a>
         <a href="https://github.com/Sarvarbek-Erniyazov" target="_blank" class="contact-card">
-            <i class="fab fa-github"></i>
-            <span class="contact-label">GitHub</span>
-            <span class="contact-val">@Sarvarbek-Erniyazov</span>
+            <i class="fab fa-github"></i><span class="contact-label">GitHub</span><span class="contact-val">@Sarvarbek-Erniyazov</span>
         </a>
     </div>
 </section>
@@ -1498,7 +888,6 @@
             });
         });
     });
-
     const toggleBtn = document.getElementById('toggleEarlier');
     const earlierList = document.getElementById('earlierList');
     if (toggleBtn && earlierList) {
@@ -1507,7 +896,6 @@
             earlierList.classList.toggle('open');
         });
     }
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
@@ -1516,13 +904,12 @@
             }
         });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.pub-card, .grant-card, .project-card, .contact-card').forEach(el => {
+    document.querySelectorAll('.pub-card, .grant-card, .explore-card, .project-card, .contact-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, border-color 0.35s, box-shadow 0.35s, background 0.3s';
         observer.observe(el);
     });
 </script>
-
 </body>
 </html>
