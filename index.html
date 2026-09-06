@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarvarbek Erniyazov | Trustworthy Cyber-Physical &amp; Energy AI</title>
+  <meta name="description" content="Research on risk-bounded and distribution-resilient learning for heterogeneous energy and cyber-physical systems.">
+  <meta name="author" content="Sarvarbek Erniyazov">
+  <link rel="canonical" href="https://sarvarbek-erniyazov.github.io/">
+
+  <!-- Social / search previews -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Sarvarbek Erniyazov | Trustworthy Cyber-Physical &amp; Energy AI">
+  <meta property="og:description" content="Research on risk-bounded and distribution-resilient learning for heterogeneous energy and cyber-physical systems.">
+  <meta property="og:url" content="https://sarvarbek-erniyazov.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts: Spectral (headings) + IBM Plex Sans (body). Both fall back to system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sarvarbek Erniyazov",
+    "jobTitle": "Ph.D. Candidate in Computer Engineering",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Chonnam National University" },
+    "email": "mailto:erniyazov_sarvarbek@jnu.ac.kr",
+    "url": "https://sarvarbek-erniyazov.github.io/",
+    "sameAs": [
+      "https://orcid.org/0000-0001-8828-2978",
+      "https://scholar.google.com/citations?user=B3qpvQcAAAAJ&hl=en",
+      "https://github.com/Sarvarbek-Erniyazov",
+      "https://huggingface.co/Sarvarbek13",
+      "https://www.linkedin.com/in/sarvarbek-erniyazov-ba952b13a/"
+    ]
+  }
+  </script>
+</head>
+
+<!-- ===========================================================================
+     FILE LAYOUT (all in the repository root, except the paper PDFs):
+       index.html · style.css · site.js · Sarvarbek_Erniyazov_Academic_CV.pdf
+       assets/papers/*.pdf   (the four published-article PDFs)
+
+     SOURCE OF TRUTH — update these numbers in ONE place, then search the page
+     for the same values. They also appear in the academic CV.
+       Metrics verified:            September 2026
+       Total citations:             113 or more (Google Scholar)
+       Citations, MEE 2019 article: 88
+       Peer-reviewed AI journal articles (2024–2026): 3
+       Public code/model repositories: 10
+       Hosted research interfaces:  7  (6 Hugging Face Spaces + 1 Streamlit console)
+       Defense / conferral / availability: Dec 2026 / Feb 2027 / Mar 2027
+     =========================================================================== -->
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#home">Sarvarbek Erniyazov</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research-program">Program</a></li>
+        <li><a href="#peer-reviewed-research">Peer-reviewed</a></li>
+        <li><a href="#open-research-artifacts">Artifacts</a></li>
+        <li><a href="#future-research-agenda">Agenda</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#cv-contact">CV &amp; contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== 1. HOME / RESEARCH IDENTITY ===================== -->
+<section class="hero" id="home" aria-labelledby="name">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="name">Sarvarbek Erniyazov</h1>
+      <p class="identity">Trustworthy Cyber-Physical &amp; Energy AI</p>
+      <p class="theme">Risk-Bounded and Distribution-Resilient Learning for Heterogeneous Physical Systems</p>
+      <p class="affiliation">
+        <strong>Ph.D. Candidate in Computer Engineering</strong><br>
+        AI Laboratory, Chonnam National University, South Korea
+      </p>
+      <ul class="link-row" aria-label="Quick links">
+        <li><a class="primary" href="#research-program">Research program</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#open-research-artifacts">Open research artifacts</a></li>
+        <li><a href="#future-research-agenda">Future research agenda</a></li>
+        <li><a href="Sarvarbek_Erniyazov_Academic_CV.pdf">Academic CV (PDF)</a></li>
+      </ul>
+      <ul class="link-row" aria-label="Profiles" style="margin-top:10px">
+        <li><a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0000-0001-8828-2978" rel="noopener">ORCID</a></li>
+        <li><a href="https://github.com/Sarvarbek-Erniyazov" rel="noopener">GitHub</a></li>
+        <li><a href="https://huggingface.co/Sarvarbek13" rel="noopener">Hugging Face</a></li>
+      </ul>
+    </div>
+
+    <aside class="timeline-box" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">Doctoral timeline and availability</h2>
+      <dl>
+        <dt>Dissertation defense</dt><dd>December 2026</dd>
+        <dt>Degree conferral</dt><dd>February 2027</dd>
+        <dt>Postdoctoral availability</dt><dd>March 2027</dd>
+      </dl>
+      <p>Under university regulations, my university affiliation and associated grant responsibilities conclude upon degree conferral; no institutional, funding, or time commitment continues thereafter.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- Research trajectory: the required intellectual progression, shown as a sequence -->
+<section class="trajectory" aria-labelledby="trajectory-title">
+  <div class="wrap">
+    <h2 id="trajectory-title" class="visually-hidden">Research trajectory</h2>
+    <ol>
+      <li data-step="1">
+        <p class="stage-when">Undergraduate and M.S. research, 2011–2018</p>
+        <h3>Security and physical computation</h3>
+        <p>An undergraduate specialization in information security, then low-power quantum-dot cellular automata circuits in an information-security laboratory: a hardware-aware view of energy, latency, and resource limits.</p>
+      </li>
+      <li data-step="2">
+        <p class="stage-when">Doctoral research, 2020–present</p>
+        <h3>Heterogeneous spatio-temporal energy modeling</h3>
+        <p>Graph neural networks, frequency-aware representations, mixture-of-experts, and federated learning for solar, building-energy, and industrial-control systems.</p>
+      </li>
+      <li data-step="3">
+        <p class="stage-when">Emerging independent agenda</p>
+        <h3>Risk-bounded decisions under distribution shift</h3>
+        <p>Models that quantify uncertainty, detect violated assumptions, and act, abstain, or adapt when clients, modalities, and operating conditions differ from training.</p>
+      </li>
+    </ol>
+    <p class="question">One question connects every stage: how can learning systems that observe or influence physical environments remain reliable when sites, clients, sensors, modalities, and operating conditions differ from those represented during training?</p>
+  </div>
+</section>
+
+<!-- ============================ 2. ABOUT ================================= -->
+<section class="section band" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <h2 id="about-title">About My Research</h2>
+    <div class="prose-2col">
+      <p>My research asks how artificial-intelligence systems that observe and control the physical world can remain reliable when sites, sensors, modalities, clients, and operating conditions differ from those represented during training. I develop spatio-temporal graph learning, multimodal mixture-of-experts, federated learning, and uncertainty- and risk-control methods for heterogeneous cyber-physical systems. My primary application domain is energy, including solar and building-energy forecasting, virtual power plants, and industrial anomaly detection. Across these settings, my objective is not only to reduce average prediction error, but also to determine when a model can act reliably, when it should abstain, and how its failure behavior changes under distribution shift.</p>
+      <p>My research trajectory follows a coherent progression from physical computation to reliable decision-making. My earlier work on low-power quantum-dot cellular automata, carried out in an information-security laboratory and building on an undergraduate specialization in information security, established a hardware-aware perspective on energy, latency, and computational constraints. My doctoral research then moved from circuit-level constraints to spatio-temporal and multimodal energy modeling using graph neural networks, frequency-aware representations, mixture-of-experts, and federated learning. My emerging independent agenda extends this foundation toward risk-bounded cyber-physical AI: models that quantify uncertainty, detect violated assumptions, and adapt or defer under client, modality, and environmental shift. Thermal sensing and audio or visual deepfake detection serve as out-of-distribution stress-test environments for this common scientific question rather than as disconnected application areas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3. RESEARCH PROGRAM ============================ -->
+<section class="section" id="research-program" aria-labelledby="program-title">
+  <div class="wrap">
+    <h2 id="program-title">Research Program</h2>
+    <p class="section-intro">My work is organized around three connected research thrusts.</p>
+    <ol class="thrusts">
+      <li>
+        <h3>1. Heterogeneous Spatio-Temporal Learning</h3>
+        <p>I develop graph-based, frequency-aware, and mixture-of-experts models for physical systems whose spatial relationships, temporal dynamics, and sensing conditions vary across sites and forecast horizons.</p>
+        <p class="methods"><strong>Methods:</strong> spatio-temporal GNNs, multimodal fusion, temporal patch modeling, frequency-domain learning, and mixture-of-experts.</p>
+      </li>
+      <li>
+        <h3>2. Distributed and Edge-Aware Intelligence</h3>
+        <p>I study learning across heterogeneous clients and resource-constrained devices, with particular emphasis on decentralized energy systems and edge–cloud cooperation.</p>
+        <p class="methods"><strong>Methods:</strong> federated learning, personalized modeling, client-aware routing, on-device inference, and communication- and compute-aware evaluation.</p>
+      </li>
+      <li>
+        <h3>3. Risk Calibration and Reliability under Shift</h3>
+        <p>I investigate how predictive models should respond when exchangeability, calibration, or deployment assumptions fail. The goal is to move from unconstrained predictions to decisions with explicit uncertainty, abstention, and failure monitoring.</p>
+        <p class="methods"><strong>Methods:</strong> conformal prediction, selective prediction, drift detection, out-of-distribution evaluation, negative controls, leakage audits, and reproducibility testing.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================== RESEARCH EVIDENCE (static metrics) ============ -->
+<section class="section band" id="evidence" aria-labelledby="evidence-title">
+  <div class="wrap">
+    <h2 id="evidence-title">Research Evidence</h2>
+    <ul class="metrics">
+      <li>
+        <span class="metric-value">&ge;113</span>
+        <span class="metric-label">Total citations — all research areas</span>
+        <span class="metric-scope">Google Scholar, September 2026</span>
+      </li>
+      <li>
+        <span class="metric-value">88</span>
+        <span class="metric-label">Citations to the lead-author 2019 QCA article</span>
+        <span class="metric-scope"><em>Microelectronic Engineering</em>, 211, 37–43</span>
+      </li>
+      <li>
+        <span class="metric-value">3</span>
+        <span class="metric-label">Peer-reviewed AI journal articles</span>
+        <span class="metric-scope">Published 2024–2026, all first-author</span>
+      </li>
+      <li>
+        <span class="metric-value">10</span>
+        <span class="metric-label">Public code or model artifacts</span>
+        <span class="metric-scope">Documented public repositories; three also ship released model weights</span>
+      </li>
+      <li>
+        <span class="metric-value">7</span>
+        <span class="metric-label">Hosted research interfaces</span>
+        <span class="metric-scope">Six Hugging Face Spaces and one Streamlit console</span>
+      </li>
+    </ul>
+    <p class="metrics-note">Metrics last verified in <strong>September 2026</strong>. Citation counts cover my full research record. The lead-author 2019 low-power QCA article accounts for a substantial share of the total citations. Recent AI contributions are therefore represented separately through peer-reviewed publication status and article-level evidence. Manuscripts under review are not included in the peer-reviewed count.</p>
+  </div>
+</section>
+
+<!-- ====================== 4. PEER-REVIEWED RESEARCH ======================= -->
+<section class="section" id="peer-reviewed-research" aria-labelledby="flagship-title">
+  <div class="wrap">
+    <h2 id="flagship-title">Flagship Academic Research</h2>
+    <p class="section-intro">These studies define my primary academic contribution in spatio-temporal, multimodal, and reliable learning for energy and cyber-physical systems. Published and under-review work is labeled separately; manuscripts under review are not counted as peer-reviewed publications.</p>
+
+    <!-- Entry 1: Energy Reports 2025 -->
+    <article class="entry is-published">
+      <div class="entry-head">
+        <span class="status status-published">Peer-reviewed journal article</span>
+        <h3>Graph-Enhanced Temporal and Frequency Modeling for Solar Forecasting</h3>
+      </div>
+      <p class="venue"><em>Energy Reports</em>, 13, 4962–4984, 2025. Research area: spatio-temporal energy AI.</p>
+      <dl class="facts">
+        <dt>Research question</dt><dd>Can graph-based spatial structure, temporal patch segmentation, and frequency fusion improve multi-station solar forecasting at longer horizons?</dd>
+        <dt>Evaluation scope</dt><dd>Multi-station solar-energy production forecasting under the protocol reported in the article.</dd>
+        <dt>Reported result</dt><dd>Up to 46% lower MSE at the 12-hour horizon relative to PatchTST, Crossformer, PatchMixer, and Fredformer.</dd>
+        <dt>My contribution</dt><dd>First-author method development, model implementation, experimental design, baseline evaluation, ablation analysis, and manuscript preparation.</dd>
+      </dl>
+      <p class="limit">The 46% figure is the maximum improvement under the reported evaluation protocol; it is not generalized to all horizons, sites, or baselines.</p>
+      <ul class="entry-links">
+        <li><a href="https://doi.org/10.1016/j.egyr.2025.03.063" rel="noopener">Article (DOI)</a></li>
+        <li><a href="assets/papers/2025-energy-reports-gnn-tps-ff.pdf">PDF</a></li>
+        <li><button type="button" data-bib="egyr2025">Copy BibTeX</button></li>
+      </ul>
+    </article>
+
+    <!-- Entry 2: KSII 2026 -->
+    <article class="entry is-published">
+      <div class="entry-head">
+        <span class="status status-published">Peer-reviewed journal article</span>
+        <h3>Dynamic Multimodal GNN and Mixture-of-Experts for Solar Forecasting</h3>
+      </div>
+      <p class="venue"><em>KSII Transactions on Internet and Information Systems</em>, 20(3), 1337–1360, 2026. Research area: multimodal energy AI.</p>
+      <dl class="facts">
+        <dt>Research question</dt><dd>How should heterogeneous solar and meteorological modalities be fused when their relevance changes with weather conditions and forecast horizon?</dd>
+        <dt>Evaluation scope</dt><dd>Solar forecasting with a dynamic graph and horizon-aware mixture-of-experts framework, evaluated as reported in the article.</dd>
+        <dt>Reported result</dt><dd>49% forecast skill relative to the NAM physical model.</dd>
+        <dt>My contribution</dt><dd>First-author multimodal architecture design, graph and expert-routing methodology, evaluation, analysis, and manuscript preparation.</dd>
+      </dl>
+      <p class="limit">Forecast skill is reported against the NAM physical model under the study's evaluation setting; it is not a claim of superiority over all data-driven baselines.</p>
+      <ul class="entry-links">
+        <li><a href="https://doi.org/10.3837/tiis.2026.03.012" rel="noopener">Article (DOI)</a></li>
+        <li><a href="assets/papers/2026-ksii-multimodal-gnn-moe.pdf">PDF</a></li>
+        <li><button type="button" data-bib="ksii2026">Copy BibTeX</button></li>
+      </ul>
+    </article>
+
+    <!-- Entry 3: IJASEIT 2024 -->
+    <article class="entry is-published">
+      <div class="entry-head">
+        <span class="status status-published">Peer-reviewed journal article</span>
+        <h3>Autoencoder-Based Anomaly Detection for Industrial Control Systems</h3>
+      </div>
+      <p class="venue"><em>International Journal on Advanced Science, Engineering and Information Technology</em>, 14(6), 2024. Research area: cyber-physical security.</p>
+      <dl class="facts">
+        <dt>Research question</dt><dd>How do autoencoder-based methods compare for time-series anomaly detection in industrial control systems, and which improvements matter?</dd>
+        <dt>Evaluation scope</dt><dd>The HAI industrial-control-system security benchmark.</dd>
+        <dt>Reported result</dt><dd>99% accuracy and F1 = 0.987 under the study protocol.</dd>
+        <dt>My contribution</dt><dd>First-author model design, experimental evaluation, analysis, and manuscript preparation.</dd>
+      </dl>
+      <p class="limit">The result is benchmark evidence rather than a claim of cross-facility industrial validation. Current work extends this direction toward event-level evaluation, detection delay, false-alarm control, and reliability under site or operating-condition shift.</p>
+      <ul class="entry-links">
+        <li><a href="https://doi.org/10.18517/ijaseit.14.6.20716" rel="noopener">Article (DOI)</a></li>
+        <li><a href="assets/papers/2024-ijaseit-anomaly-detection.pdf">PDF</a></li>
+        <li><button type="button" data-bib="ijaseit2024">Copy BibTeX</button></li>
+      </ul>
+    </article>
+
+    <!-- Entry 4: Fed-ST-MoE (under review) -->
+    <article class="entry is-review">
+      <div class="entry-head">
+        <span class="status status-review">Manuscript under review — not counted as a publication</span>
+        <h3>Fed-ST-MoE: Federated Spatio-Temporal Mixture-of-Experts</h3>
+      </div>
+      <p class="venue">Research area: distributed energy AI.</p>
+      <dl class="facts">
+        <dt>Research question</dt><dd>Can decentralized forecasting across heterogeneous buildings benefit from spatio-temporal graph learning combined with client-aware mixture-of-experts?</dd>
+        <dt>Scope</dt><dd>Statistical heterogeneity and local-data retention across building-energy clients. The study does not claim a formal privacy guarantee, which would require a specified threat model, secure aggregation, differential privacy, or equivalent analysis.</dd>
+        <dt>My contribution</dt><dd>First-author problem formulation, federated architecture, experiments, and manuscript preparation.</dd>
+      </dl>
+      <p class="limit">Current status: manuscript under review. A public preprint link will be added only if permitted by the venue's review policy.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===================== 5. OPEN RESEARCH ARTIFACTS ======================= -->
+<section class="section band" id="open-research-artifacts" aria-labelledby="artifacts-title">
+  <div class="wrap">
+    <h2 id="artifacts-title">Open Research Artifacts</h2>
+    <p class="section-intro">These projects are public methodological studies, reproducibility instruments, or research prototypes. They are not presented as peer-reviewed publications unless an associated article is explicitly linked. Each entry states its evaluation scope, limitations, and evidence type.</p>
+
+    <!-- WaveSeg -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="status status-artifact">Public methodological artifact</span>
+        <h3>WaveSeg — Frequency-Boundary Adaptation for Efficient Segmentation</h3>
+      </div>
+      <p class="venue">Evidence type: public code, model weights, and interactive demo. Peer-review status: not currently presented as a peer-reviewed publication.</p>
+      <p>WaveSeg adds a 770-parameter frequency-boundary adapter to SegFormer-B0. On the reported LGG evaluation, HD95 decreased from 29.70 to 22.83 pixels, a 23% reduction. The repository also reports 58.27 FPS at 256 × 256 resolution on an RTX 4060. Patient-level splitting, boundary metrics, ablations, and the negative auxiliary-loss result are documented publicly.</p>
+      <p class="limit">This project supports my broader work on efficient and failure-aware perception; it is not used to claim clinical validation.</p>
+      <ul class="entry-links">
+        <li><a href="https://github.com/Sarvarbek-Erniyazov/WaveSeg-" rel="noopener">Code</a></li>
+        <li><a href="https://huggingface.co/Sarvarbek13/WaveSeg" rel="noopener">Model weights</a></li>
+        <li><a href="https://huggingface.co/spaces/Sarvarbek13/WaveSeg-demo" rel="noopener">Interactive demo</a></li>
+      </ul>
+    </article>
+
+    <!-- CellTriage -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="status status-artifact">Public methodological artifact</span>
+        <h3>CellTriage — Risk-Controlled Battery Quality Decisions</h3>
+      </div>
+      <p class="venue">Evidence type: public code and interactive research console. Peer-review status: not currently presented as a peer-reviewed publication.</p>
+      <p>CellTriage studies the transition from early-cycle battery-life prediction to cost-sensitive accept, reject, or defer decisions. Under the documented cross-validation protocol, the Extra Trees model achieved MAPE 9.57% ± 3.35 and rank correlation ρ = 0.944. The reported 14.2× cost reduction relative to AQL sampling is conditional on the explicitly stated cost matrix.</p>
+      <p class="limit">The central reliability result is a failure result: conformal coverage decreases from approximately 90% in distribution to 60% under held-out campaign shift. This artifact motivates my postdoctoral focus on risk control when exchangeability and deployment assumptions fail.</p>
+      <ul class="entry-links">
+        <li><a href="https://github.com/Sarvarbek-Erniyazov/CellTriage" rel="noopener">Code</a></li>
+        <li><a href="https://huggingface.co/spaces/Sarvarbek13/CellTriage" rel="noopener">Interactive research console</a></li>
+      </ul>
+    </article>
+
+    <!-- DriftSentinel -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="status status-artifact">Public reproducibility artifact</span>
+        <h3>DriftSentinel — Self-Auditing Distribution-Shift Monitoring</h3>
+      </div>
+      <p class="venue">Evidence type: public reproducibility and monitoring artifact. Peer-review status: not currently presented as a peer-reviewed publication.</p>
+      <p>DriftSentinel compares univariate, sequential, and multivariate shift detectors, including PSI, KS and chi-square tests with BH-FDR correction, CUSUM, MMD, and BBSD, on a 101,766-encounter clinical readmission model. Every detector is re-evaluated under 20-seed negative-control settings in which drift is absent by construction. These checks overturn an initial “8/8 critical” result and expose invalid detector behavior. The instrument ships with 93 automated tests, continuous integration, and byte-level determinism checks.</p>
+      <p class="limit">The contribution is the falsifiable monitoring protocol and its reproducibility instrument, not a claim that one detector solves post-deployment monitoring.</p>
+      <ul class="entry-links">
+        <li><a href="https://github.com/Sarvarbek-Erniyazov/DriftSentinel" rel="noopener">Code</a></li>
+        <li><a href="https://driftsentinel.streamlit.app/" rel="noopener">Hosted monitoring console</a></li>
+      </ul>
+    </article>
+
+    <h3 style="margin-top:34px">Additional Methodological Studies</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Artifact</th><th scope="col">Research question</th><th scope="col">Evidence status</th><th scope="col">Links</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FreqFD</strong></td>
+            <td>How well do frequency-aware detectors transfer to image generators never seen in training?</td>
+            <td>Public research code (19.4M parameters). Under a leakage-audited cross-generator protocol, unseen-generator AUC improved from 0.588 to 0.686; a substantial generalization gap remains and is stated in the README.</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/-FreqFD-cross-generator-deepfakes" rel="noopener">Code</a></td>
+          </tr>
+          <tr>
+            <td><strong>ReproLab</strong></td>
+            <td>Can a benchmark's honest-model score ceiling expose leakage or invalid feature use?</td>
+            <td>Public executable audit of AI4I-2020: F1 ceiling 0.9558 derived empirically, analytically, and by Monte Carlo, with a spread of 0.0015.</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/ReproLab" rel="noopener">Code</a></td>
+          </tr>
+          <tr>
+            <td><strong>DALM-DETR</strong></td>
+            <td>Does density-adaptive matching improve crowded-scene pedestrian detection under cross-dataset transfer?</td>
+            <td>Public code, checkpoints, and checkpoint-comparison demo. Three-rung CrowdHuman ablation: no in-domain superiority was established; the adaptive variant showed the strongest reported zero-shot transfer in the documented comparison.</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/DALM-DETR" rel="noopener">Code</a> <a href="https://huggingface.co/Sarvarbek13/dalm-detr" rel="noopener">Checkpoints</a> <a href="https://huggingface.co/spaces/Sarvarbek13/dalm-detr" rel="noopener">Demo</a></td>
+          </tr>
+          <tr>
+            <td><strong>OCRipple</strong></td>
+            <td>Which OCR errors propagate into downstream retrieval and document question answering?</td>
+            <td>Public controlled study: four OCR engines × four degradation levels × two downstream tasks. Character error rate did not predict answer quality (best ANLS 0.848 from the engine with the highest CER); includes an RF-DETR layout detector at mAP@50 73.8%.</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/OCRipple" rel="noopener">Code</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:34px">Public Research Interfaces</h3>
+    <p class="section-intro">The interfaces below demonstrate reproducible inference or analysis workflows. They are research demos and hosted prototypes, not evidence of clinical, financial, or industrial production deployment.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Interface</th><th scope="col">Label</th><th scope="col">Scope</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/WaveSeg-demo" rel="noopener">WaveSeg</a></td><td>Interactive model demo</td><td>Segmentation inference with released weights</td></tr>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/CellTriage" rel="noopener">CellTriage</a></td><td>Interactive research console</td><td>Battery triage and risk-control analysis</td></tr>
+          <tr><td><a href="https://driftsentinel.streamlit.app/" rel="noopener">DriftSentinel</a></td><td>Hosted monitoring console</td><td>Drift diagnostics and negative-control evidence</td></tr>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/FinRiskGuard" rel="noopener">FinRiskGuard</a></td><td>End-to-end research prototype</td><td>Public-dataset fraud and credit-risk modeling</td></tr>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/dalm-detr" rel="noopener">DALM-DETR</a></td><td>Checkpoint-comparison demo</td><td>Crowded-pedestrian detection experiments</td></tr>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/auto-damage-segmentation" rel="noopener">Auto Damage</a></td><td>Applied computer-vision prototype</td><td>Vehicle-part and damage segmentation</td></tr>
+          <tr><td><a href="https://huggingface.co/spaces/Sarvarbek13/Mid-term-OCR" rel="noopener">Uzbek Handwriting OCR</a></td><td>Interactive model demo</td><td>Research model for Uzbek handwriting recognition</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 6. FUTURE RESEARCH AGENDA ======================= -->
+<section class="section" id="future-research-agenda" aria-labelledby="agenda-title">
+  <div class="wrap">
+    <h2 id="agenda-title">Future Research Agenda</h2>
+    <h3>From Accurate Forecasts to Risk-Bounded Decisions under Shift</h3>
+    <p>My doctoral research asks how heterogeneous energy systems can be forecast more accurately by modeling spatial structure, multiple sensing modalities, varying forecast horizons, and distributed clients. This work established methods in spatio-temporal graph learning, dynamic multimodal fusion, frequency-aware modeling, and federated mixture-of-experts.</p>
+    <p>My postdoctoral agenda addresses a different scientific question:</p>
+    <blockquote>When should a distributed multimodal model act, abstain, adapt, or request additional information when its clients, modalities, or operating environment differ from those represented during training?</blockquote>
+    <p>The next stage of my research will move beyond average forecast accuracy toward selective and risk-calibrated decision-making. I aim to develop methods that identify violated assumptions, quantify decision risk under shift, and retain reliable behavior when modalities are missing, sensors are corrupted, or clients follow different distributions.</p>
+
+    <h3 style="margin-top:30px">Planned Research Thrusts</h3>
+    <ol class="agenda-list">
+      <li><h4>Shift-aware multimodal learning</h4><p>Develop fusion and expert-routing mechanisms that explicitly model missing, delayed, corrupted, or site-dependent modalities.</p></li>
+      <li><h4>Risk-calibrated action and abstention</h4><p>Connect uncertainty estimates to operational decisions through selective prediction, conformal risk control, and cost-aware deferral.</p></li>
+      <li><h4>Personalized distributed learning</h4><p>Study client-aware and communication-efficient methods for heterogeneous cyber-physical sites rather than optimizing only global average performance.</p></li>
+      <li><h4>Failure-centered evaluation</h4><p>Evaluate worst-site risk, false alarms, detection delay, calibration, risk–coverage behavior, communication cost, latency, and energy use under controlled distribution shifts.</p></li>
+    </ol>
+
+    <h3 style="margin-top:30px">Independence from My Doctoral and Current Grant Work</h3>
+    <p>This agenda is not a larger version of an existing forecasting architecture, Fed-ST-MoE, or VPP-Copilot. My doctoral and current grant work provide the empirical foundation and application context. The postdoctoral contribution is a new learning and decision framework whose scientific endpoint is bounded operational risk under shift, not forecast accuracy or platform deployment alone.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Doctoral / current foundation</th><th scope="col">Independent postdoctoral direction</th></tr></thead>
+        <tbody>
+          <tr><td>Multi-horizon forecasting</td><td>Action, abstention, and information acquisition</td></tr>
+          <tr><td>Average MSE/RMSE optimization</td><td>Worst-site risk and risk–coverage control</td></tr>
+          <tr><td>Complete or synchronized modalities</td><td>Missing, delayed, and corrupted modalities</td></tr>
+          <tr><td>Empirical federated mixture-of-experts</td><td>Personalized distributed learning under explicit shift</td></tr>
+          <tr><td>Local-data retention</td><td>A defined threat model where privacy is claimed</td></tr>
+          <tr><td>Forecast output</td><td>Cyber-physical decision consequences</td></tr>
+          <tr><td>Korean VPP deliverables</td><td>New host-specific benchmark, testbed, or methodology</td></tr>
+          <tr><td>Platform implementation</td><td>Generalizable learning and risk-control contribution</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. RESEARCH EXPERIENCE & FUNDED R&D ================== -->
+<section class="section band" id="experience" aria-labelledby="experience-title">
+  <div class="wrap">
+    <h2 id="experience-title">Research Experience and Funded R&amp;D</h2>
+
+    <div class="role">
+      <p class="when">2020 – present</p>
+      <div>
+        <h3>Ph.D. Researcher</h3>
+        <p class="org">AI Laboratory, Department of Computer Engineering, Chonnam National University, Yeosu, South Korea. Advisor: Prof. Chang Gyoon Lim.</p>
+        <p><strong>Research program:</strong> spatio-temporal, multimodal, and distributed learning for energy forecasting and cyber-physical anomaly detection.</p>
+        <ul>
+          <li>Led first-author research on graph-enhanced temporal and frequency modeling for multi-station solar forecasting, including architecture design, implementation, baseline comparison, ablation analysis, and manuscript preparation.</li>
+          <li>Developed dynamic graph and mixture-of-experts methods for integrating heterogeneous solar and meteorological modalities across forecast horizons.</li>
+          <li>Investigated federated spatio-temporal mixture-of-experts for heterogeneous building-energy clients; the manuscript is under review and excluded from the peer-reviewed publication count.</li>
+          <li>Developed and evaluated autoencoder-based time-series anomaly detection on the HAI industrial-control-system benchmark.</li>
+          <li>Built reproducible research pipelines covering data validation, leakage-aware splitting, model training, statistical evaluation, ablations, and research-prototype integration.</li>
+          <li>Contributed AI methodology and technical deliverables to Korean national R&amp;D programs involving virtual power plants, edge–cloud energy management, satellite–ground data integration, and power-infrastructure monitoring.</li>
+        </ul>
+        <div class="contrib-note"><strong>Individual contribution statement.</strong> For first-author doctoral studies, I led method development, software implementation, experimental design, baseline and ablation evaluation, result visualization, and manuscript preparation. Formal grant governance and institutional PI responsibilities remained with the appointed faculty principal investigator.</div>
+      </div>
+    </div>
+
+    <div class="role">
+      <p class="when">2016 – 2018</p>
+      <div>
+        <h3>Graduate Researcher (M.S.)</h3>
+        <p class="org">Information Security Laboratory / QCA Research Group, Kumoh National Institute of Technology, Gumi, South Korea.</p>
+        <ul>
+          <li>Designed and simulated low-power quantum-dot cellular automata circuits, including full adders, carry-save and carry-look-ahead adders, magnitude comparators, subtractors, and reversible logic.</li>
+          <li>Reported more than 50% area reduction for the proposed carry-look-ahead architecture relative to the specified comparison design.</li>
+          <li>Contributed to the laboratory's peer-reviewed QCA publication record, including the 2019 <em>Microelectronic Engineering</em> article.</li>
+          <li>Conducted this work inside an information-security laboratory, extending an undergraduate specialization in information security into hardware-level design. The resulting perspective on energy, latency, sensing, and resource constraints — and on reliability as a security-adjacent property of physical systems — now informs my edge and cyber-physical AI research.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:36px">Education</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Degree</th><th scope="col">Institution</th><th scope="col">Years</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Ph.D. in Computer Engineering</strong><br><small>AI Laboratory · Advisor: Prof. Chang Gyoon Lim</small></td>
+            <td>Chonnam National University, Yeosu, South Korea</td>
+            <td>2020 – February 2027 (expected)</td>
+          </tr>
+          <tr>
+            <td><strong>M.S. in Computer Engineering</strong><br><small>Information Security Laboratory (QCA Research Group)</small></td>
+            <td>Kumoh National Institute of Technology, Gumi, South Korea</td>
+            <td>2016 – 2018</td>
+          </tr>
+          <tr>
+            <td><strong>B.S. in Computer Engineering</strong><br><small>Information Security specialization</small></td>
+            <td>Tashkent University of Information Technologies, Uzbekistan</td>
+            <td>2011 – 2015</td>
+          </tr>
+        </tbody>
+        <caption>All three degrees are in computer engineering, with a continuous information-security thread: undergraduate specialization in information security, master's research conducted in an information-security laboratory, and doctoral work on industrial-control-system anomaly detection and trustworthy cyber-physical AI.</caption>
+      </table>
+    </div>
+
+    <h3 style="margin-top:36px">National R&amp;D Technical Leadership</h3>
+    <p class="section-intro">Role formulation used throughout: <strong>Lead AI Architect / Lead Researcher for the assigned technical work package; not the formal grant Principal Investigator.</strong> I led the assigned AI work package from problem formulation and data-interface design through model architecture, leakage-aware validation, and research-prototype integration, and coordinated technical interfaces with the faculty PI, domain partners, and software contributors while institutional grant governance remained with the formally appointed Principal Investigator.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Program / ID</th><th scope="col">Project</th><th scope="col">Status</th><th scope="col">My technical role</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>TIPA<br><small>RS-2026-25529976</small></td>
+            <td>sLM–LMM Cooperative Virtual Power Plant Platform for on-device AI and cloud-integrated energy management (industry–academia commercialization R&amp;D)</td>
+            <td><span class="status status-published">Funded · active</span><br><small>2026–2028</small></td>
+            <td>Lead AI Architect / Lead Researcher for the university AI work package: model and evaluation architecture for on-device small language models cooperating with cloud multimodal models; AI-side interface design across telemetry, forecasts, operator tools, and edge–cloud inference; technical validation of assigned ML deliverables.</td>
+          </tr>
+          <tr>
+            <td>TIPA<br><small>RS-2025-02312851</small></td>
+            <td>Preliminary study for an on-device AI and cloud-integrated VPP platform</td>
+            <td><span class="status status-artifact">Funded · completed</span><br><small>2025</small></td>
+            <td>Lead AI Researcher for the machine-learning feasibility work: feasibility analysis, model architecture planning, and prototype evaluation that supported the subsequent commercialization-stage project.</td>
+          </tr>
+          <tr>
+            <td>NRF<br><small>RS-2025-00564485</small></td>
+            <td>sML-based satellite–ground data integration for solar variability management and VPP operations</td>
+            <td><span class="status status-review">Submitted proposal</span><br><small>not a funded award</small></td>
+            <td>Contributed multimodal mixture-of-experts and on-device-AI methodology to the submitted proposal.</td>
+          </tr>
+          <tr>
+            <td>INNOPOLIS<br><small>RS-2026-25550513</small></td>
+            <td>Global validation of AI-based power-equipment anomaly detection and preventive control (technology transfer and commercialization)</td>
+            <td><span class="status status-review">Submitted proposal</span><br><small>not a funded award</small></td>
+            <td>Contributed AI anomaly-detection and validation methodology for power-equipment monitoring to the submitted proposal.</td>
+          </tr>
+        </tbody>
+        <caption>Earlier funded-program contributions as a research contributor: NRF/MSIP (NRF-2017R1D1A3B03034346), Regional Innovation Strategy, Ministry of Education (2021RIS-002), and MSS Technology Development Program (RS-2023-00278623).</caption>
+      </table>
+    </div>
+    <p class="small"><strong>Appointment clarification.</strong> My university affiliation and associated project responsibilities conclude upon Ph.D. degree conferral in February 2027. No project, funding, or time commitment will continue into a postdoctoral appointment.</p>
+
+    <h3 style="margin-top:36px">Ongoing Cross-Domain Stress Tests</h3>
+    <p>Thermal and audio sensing are used as methodological stress-test environments for my broader research on distribution-resilient physical AI. They introduce different forms of domain shift—subject and sensor variation in thermal perception, and corpus, codec, resampling, and replay variation in speech anti-spoofing—while preserving a common scientific question: how should a model detect and respond when its deployment distribution differs from its training distribution?</p>
+    <ul>
+      <li><strong>ThermalGuard</strong> <span class="status status-progress">Study in progress</span><br>Exploratory study of identity-minimizing thermal perception for fall-event detection under subject, site, and sensor shift. The evaluation focuses on event-level sensitivity, false alarms, detection delay, and edge-inference constraints. No formal privacy guarantee is claimed.</li>
+      <li><strong>AudioShield</strong> <span class="status status-progress">Study in progress</span><br>Exploratory cross-corpus anti-spoofing study using WavLM and XLS-R under codec, resampling, replay, and corpus shift. Six controlled experiments and a domain-reliance analysis are documented in the public repository; blind evaluation remains pending, and no final benchmark or state-of-the-art claim is made. <a href="https://github.com/Sarvarbek-Erniyazov/RADAR-AudioShield" rel="noopener">Code</a> · <a href="https://radar-challenge.github.io/" rel="noopener">RADAR challenge</a></li>
+    </ul>
+    <p class="small">These studies are labeled exploratory until blind or external evaluation is complete. They are not counted as publications and are not described as privacy-preserving or state of the art without the corresponding evidence.</p>
+  </div>
+</section>
+
+<!-- ============================ 8. PUBLICATIONS =========================== -->
+<section class="section" id="publications" aria-labelledby="pubs-title">
+  <div class="wrap">
+    <h2 id="pubs-title">Publications</h2>
+    <p class="section-intro">Complete list of peer-reviewed publications with verified bibliographic records, followed by manuscripts under review. My name is shown in bold. Citation counts were verified through Google Scholar in September 2026. Full profiles: <a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a> and <a href="https://orcid.org/0000-0001-8828-2978" rel="noopener">ORCID</a>.</p>
+
+    <h3 class="pub-group">Peer-reviewed journal articles — published or accepted</h3>
+    <ol class="pub-list">
+      <li><span class="tag">[J1]</span><div>
+        <span class="title">A Multimodal Fusion Framework for Solar Forecasting using Dynamic GNNs and Mixture of Experts.</span>
+        <div><strong>S. Erniyazov</strong>, M. A. Jaleel, C. G. Lim, and S. B. Ha.</div>
+        <div class="meta"><em>KSII Transactions on Internet and Information Systems</em>, 20(3), 1337–1360, 2026.</div>
+        <div class="links"><a href="https://doi.org/10.3837/tiis.2026.03.012" rel="noopener">DOI</a><a href="assets/papers/2026-ksii-multimodal-gnn-moe.pdf">PDF</a><button type="button" data-bib="ksii2026">Copy BibTeX</button></div>
+      </div></li>
+      <li><span class="tag">[J2]</span><div>
+        <span class="title">GNN-enhanced temporal patch segmentation and frequency fusion model for robust solar energy production forecasting.</span>
+        <div><strong>S. Erniyazov</strong> and C. G. Lim.</div>
+        <div class="meta"><em>Energy Reports</em>, 13, 4962–4984, 2025.</div>
+        <div class="links"><a href="https://doi.org/10.1016/j.egyr.2025.03.063" rel="noopener">DOI</a><a href="assets/papers/2025-energy-reports-gnn-tps-ff.pdf">PDF</a><button type="button" data-bib="egyr2025">Copy BibTeX</button></div>
+      </div></li>
+      <li><span class="tag">[J3]</span><div>
+        <span class="title">Comprehensive Analysis and Improved Techniques for Anomaly Detection in Time Series Data with Autoencoder Models.</span>
+        <div><strong>S. Erniyazov</strong>, Y.-M. Kim, M. A. Jaleel, and C. G. Lim.</div>
+        <div class="meta"><em>International Journal on Advanced Science, Engineering and Information Technology</em>, 14(6), 2024.</div>
+        <div class="links"><a href="https://doi.org/10.18517/ijaseit.14.6.20716" rel="noopener">DOI</a><a href="assets/papers/2024-ijaseit-anomaly-detection.pdf">PDF</a><button type="button" data-bib="ijaseit2024">Copy BibTeX</button></div>
+      </div></li>
+      <li><span class="tag">[J4]</span><div>
+        <span class="title">Carry save adder and carry look ahead adder using inverter chain based coplanar QCA full adder for low energy dissipation.</span>
+        <div><strong>S. Erniyazov</strong> and J.-C. Jeon.</div>
+        <div class="meta"><em>Microelectronic Engineering</em>, 211, 37–43, 2019. 88 citations (Google Scholar, September 2026).</div>
+        <div class="links"><a href="https://doi.org/10.1016/j.mee.2019.03.015" rel="noopener">DOI</a><a href="assets/papers/2019-microelectronic-qca-fa-csa-cla.pdf">PDF</a><button type="button" data-bib="mee2019">Copy BibTeX</button></div>
+      </div></li>
+      <li><span class="tag">[J5]</span><div>
+        <span class="title">Coplanar Subtractor Design in QCA for Arithmetic Circuit Design.</span>
+        <div><strong>S. Erniyazov</strong> and J. C. Jeon.</div>
+        <div class="meta"><em>Advanced Science Letters</em>, 23(10), 10112–10117, 2017.</div>
+        <div class="links"><a href="https://doi.org/10.1166/asl.2017.10399" rel="noopener">DOI</a></div>
+      </div></li>
+      <li><span class="tag">[J6]</span><div>
+        <span class="title">Implementation of Area Efficient Fredkin Gate for Compact Reversible QCA Circuit.</span>
+        <div><strong>S. Erniyazov</strong> and J. C. Jeon.</div>
+        <div class="meta"><em>Advanced Science Letters</em>, 23(10), 10092–10096, 2017.</div>
+        <div class="links"><a href="https://doi.org/10.1166/asl.2017.10395" rel="noopener">DOI</a></div>
+      </div></li>
+      <li><span class="tag">[J7]</span><div>
+        <span class="title">Reversible Circuit Design in QCA Based on Double Feynman Gate.</span>
+        <div><strong>S. Erniyazov</strong> and J. C. Jeon.</div>
+        <div class="meta"><em>Advanced Science Letters</em>, 23(10), 9852–9856, 2017.</div>
+        <div class="links"><a href="https://doi.org/10.1166/asl.2017.9810" rel="noopener">DOI</a></div>
+      </div></li>
+    </ol>
+
+    <h3 class="pub-group">Peer-reviewed conference and proceedings papers</h3>
+    <ol class="pub-list">
+      <li><span class="tag">[C1]</span><div>
+        <span class="title">Area Efficient Magnitude Comparator Based on QCA.</span>
+        <div><strong>S. Erniyazov</strong> and J.-C. Jeon.</div>
+        <div class="meta"><em>Advanced Science and Technology Letters</em>, 150, 75–79, 2018.</div>
+        <div class="links"><a href="https://doi.org/10.14257/astl.2018.150.19" rel="noopener">DOI</a></div>
+      </div></li>
+      <li><span class="tag">[C2]</span><div>
+        <span class="title">Half Subtractor in QCA for Arithmetic Circuits.</span>
+        <div><strong>S. Erniyazov</strong> and J.-C. Jeon.</div>
+        <div class="meta">In <em>Proceedings of the International Workshop on Future Technology (FUTECH 2017)</em>, Korean Institute of Information Technology, pp. 148–149, July 2017.</div>
+        <div class="links"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07224997" rel="noopener">Proceedings record</a></div>
+      </div></li>
+      <!--
+        Three further domestic conference papers from the M.S. period (reversible
+        Fredkin gate, area-efficient Feynman gate, reversible Toffoli gate; 2017)
+        are not listed until their complete proceedings records (title, venue,
+        pages, stable URL) are confirmed. Add them here using the same format.
+      -->
+    </ol>
+
+    <h3 class="pub-group">Manuscripts under review — not included in the publication count</h3>
+    <ol class="pub-list">
+      <li><span class="tag">[M1]</span><div>
+        <span class="title">Fed-ST-MoE: A Federated Spatio-Temporal GNN with Mixture-of-Experts for Heterogeneous Building Energy and Demand Forecasting.</span>
+        <div><strong>S. Erniyazov</strong> et al.</div>
+        <div class="meta">Manuscript under review. <span class="status status-review">Under review</span></div>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========================== 9. CV & CONTACT ============================= -->
+<section class="section band" id="cv-contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <h2 id="contact-title">CV and Contact</h2>
+    <p class="section-intro">The four-page academic CV contains the complete publication list, research experience with individual-contribution statements, funded and submitted R&amp;D, and open research artifacts. I welcome correspondence about postdoctoral positions and research collaboration in trustworthy cyber-physical and energy AI.</p>
+    <p><a class="btn primary" href="Sarvarbek_Erniyazov_Academic_CV.pdf">Download the academic CV (PDF, 4 pages)</a></p>
+    <ul class="contact-grid">
+      <li><a href="mailto:erniyazov_sarvarbek@jnu.ac.kr"><b>Email</b><span>erniyazov_sarvarbek@jnu.ac.kr</span></a></li>
+      <li><a href="https://scholar.google.com/citations?user=B3qpvQcAAAAJ&amp;hl=en" rel="noopener"><b>Google Scholar</b><span>Publication and citation record</span></a></li>
+      <li><a href="https://orcid.org/0000-0001-8828-2978" rel="noopener"><b>ORCID</b><span>0000-0001-8828-2978</span></a></li>
+      <li><a href="https://github.com/Sarvarbek-Erniyazov" rel="noopener"><b>GitHub</b><span>github.com/Sarvarbek-Erniyazov</span></a></li>
+      <li><a href="https://huggingface.co/Sarvarbek13" rel="noopener"><b>Hugging Face</b><span>huggingface.co/Sarvarbek13</span></a></li>
+      <li><a href="https://www.linkedin.com/in/sarvarbek-erniyazov-ba952b13a/" rel="noopener"><b>LinkedIn</b><span>Professional profile</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 10. ADDITIONAL PROTOTYPES / ARCHIVE =============== -->
+<section class="section" id="archive" aria-labelledby="archive-title">
+  <div class="wrap">
+    <h2 id="archive-title">Additional Prototypes and Archive</h2>
+    <p class="section-intro">Secondary engineering projects and studies in progress. They demonstrate technical range but do not define my research identity, and none is presented as a peer-reviewed result or an operational deployment.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>FinRiskGuard</strong></td>
+            <td>Dual-task fraud detection and credit scoring on public datasets (IEEE-CIS, Home Credit): temporal validation, stacking ensembles, SHAP explanations; fraud AUC-ROC 0.926 and credit AUC-ROC 0.785 as reported in the repository. Served through FastAPI and Docker with a public Gradio front end.</td>
+            <td>End-to-end research prototype</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/FinRiskGuard" rel="noopener">Code</a> <a href="https://huggingface.co/spaces/Sarvarbek13/FinRiskGuard" rel="noopener">Demo</a></td>
+          </tr>
+          <tr>
+            <td><strong>Auto Damage Segmentation</strong></td>
+            <td>YOLOv8-seg fine-tuned across 19 vehicle-part classes (mask mAP50 ≈ 0.73 as reported) combined with SAM, exported to ONNX and served via FastAPI.</td>
+            <td>Applied computer-vision prototype</td>
+            <td><a href="https://github.com/Sarvarbek-Erniyazov/auto-damage-segmentation" rel="noopener">Code</a> <a href="https://huggingface.co/spaces/Sarvarbek13/auto-damage-segmentation" rel="noopener">Demo</a></td>
+          </tr>
+          <tr>
+            <td><strong>Uzbek Handwriting OCR</strong></td>
+            <td>TrOCR (0.3B parameters) fine-tuned for Uzbek handwriting, powering an extract → correct → grade pipeline for scanned student reports.</td>
+            <td>Interactive model demo; research code and model release</td>
+            <td><a href="https://huggingface.co/Sarvarbek13/trocr-uzbek" rel="noopener">Model</a> <a href="https://huggingface.co/spaces/Sarvarbek13/Mid-term-OCR" rel="noopener">Demo</a></td>
+          </tr>
+          <tr>
+            <td><strong>VPP-Copilot</strong></td>
+            <td>On-device small-language-model tool-calling agent for virtual power plant operations, developed within the active TIPA project.</td>
+            <td><span class="status status-progress">Study in progress</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Sci-RAG</strong></td>
+            <td>OCR-robust retrieval-augmented question answering over scientific documents, building on the OCRipple findings.</td>
+            <td><span class="status status-progress">Study in progress</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>SmartGuard</strong></td>
+            <td>Vision-language traffic-accident understanding on the IEEE DataPort traffic-accident video benchmark.</td>
+            <td><span class="status status-progress">Study in progress</span></td>
+            <td><a href="https://ieee-dataport.org/documents/traffic-accident-detection-video-dataset-ai-driven-computer-vision-systems-smart-city" rel="noopener">Benchmark</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Sarvarbek Erniyazov · Ph.D. Candidate in Computer Engineering · AI Laboratory, Chonnam National University, South Korea.</p>
+    <p>Research metrics, publication statuses, and grant statuses on this page were last verified in September 2026 and match the academic CV. Manuscripts under review and submitted proposals are labeled as such and are never counted as publications or funded awards.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
