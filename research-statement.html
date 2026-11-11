@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Statement (Agentic AI) | Sarvarbek Erniyazov</title>
+  <meta name="description" content="Two research proposals for agentic AI: verifier-rewarded post-training for research agents, and an auditable co-scientist for forecasting. Proposals, not results.">
+  <meta name="author" content="Sarvarbek Erniyazov">
+  <link rel="canonical" href="https://sarvarbek-erniyazov.github.io/research-statement.html">
+
+  <!-- Same fonts and stylesheet as the main page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html#home">Sarvarbek Erniyazov</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Sections">
+      <ul>
+        <li><a href="index.html#llm-agentic">LLM &amp; agents</a></li>
+        <li><a href="index.html#open-research-artifacts">Artifacts</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#cv-contact">CV &amp; contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section" aria-labelledby="statement-title">
+  <div class="wrap">
+    <h1 id="statement-title">Research statement (agentic AI)</h1>
+    <p class="section-intro">Two proposals for postdoctoral research. Both are proposals, not results: nothing on this page reports an experiment that has been run. They build on practices I already use and document publicly: a pre-registered study design (FaultLine), negative controls that can overturn a reported alarm (DriftSentinel), and verifier-based rewards in my current LLM post-training and evaluation study (in progress, unpublished).</p>
+
+    <!-- Proposal 1 -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="status status-artifact">Proposal 1</span>
+        <h2 style="margin:0;font-size:1.25rem">Verifier-rewarded post-training for research agents</h2>
+      </div>
+      <dl class="facts">
+        <dt>Idea</dt><dd>Post-train agents that carry out research tasks, such as running an analysis or an experiment, with reinforcement learning whose reward comes from executable verifiers: checks that the produced work runs, reproduces the numbers it states, and passes its own tests.</dd>
+        <dt>Headroom check</dt><dd>Before each RL stage, score the current checkpoint with the same verifiers on a development set. Run the stage only if there is measurable headroom, that is, tasks the model solves sometimes but not always. If the model almost never or almost always passes, the reward carries little learning signal; the stage is skipped and the skip is recorded.</dd>
+        <dt>Sealed test</dt><dd>Fix the test set and the analysis plan, and register both, before training begins. The test set stays sealed until all training and model-selection decisions are frozen, and the comparison that decides the outcome, including what counts as no improvement over supervised fine-tuning, is stated in advance.</dd>
+        <dt>Failure condition</dt><dd>If the verifier-rewarded stages do not improve the sealed test over the supervised baseline, that is the reported result.</dd>
+      </dl>
+    </article>
+
+    <!-- Proposal 2 -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="status status-artifact">Proposal 2</span>
+        <h2 style="margin:0;font-size:1.25rem">An auditable co-scientist for forecasting</h2>
+      </div>
+      <dl class="facts">
+        <dt>Idea</dt><dd>An agent that proposes and runs forecasting analyses, for example on spatio-temporal energy data of the kind used in my published work, but may report a finding only after it passes executable checks.</dd>
+        <dt>Checks</dt><dd>Every reported finding must pass negative controls, meaning the same pipeline run on a setting where the claimed effect cannot exist, and leakage audits, meaning time- and site-separated splits with no information from the evaluation period in features or preprocessing. A finding that fails is reported as failed, together with the check it failed.</dd>
+        <dt>Motivation</dt><dd>In my own public work such checks changed the conclusion: DriftSentinel's 20-seed negative controls overturned an initial "8/8 critical" drift result, and in FaultLine a baseline added after the registered programme closed (time since the last fault) beat the model, which the study reports as its headline finding.</dd>
+        <dt>Evaluation</dt><dd>Compare the findings the agent would report with and without the check gate, and record how many ungated findings the checks reject.</dd>
+        <dt>Failure condition</dt><dd>If the gate rejects almost nothing, or rejects findings that an independent re-analysis confirms, the checks are not informative, and that is reported.</dd>
+      </dl>
+    </article>
+
+    <p class="small">Status: both directions are proposals for postdoctoral work; no results exist for either. Current work is listed under <a href="index.html#llm-agentic">LLM post-training and agentic systems</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Sarvarbek Erniyazov · Ph.D. Candidate in Computer Engineering · AI Laboratory, Chonnam National University, South Korea.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
